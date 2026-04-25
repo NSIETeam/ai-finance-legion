@@ -1,0 +1,5 @@
+﻿node_modules
+dist
+task-summary*.md
+ai-finance-legion-agent-pack.zip
+docs/
