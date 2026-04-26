@@ -98,8 +98,64 @@ footer{padding:40px 0}
 <body>
 <nav id="navbar"><div class="container nav-inner"><a href="#" class="logo">&#10022; AI <span class="gradient-text">Finance Legion</span></a><div class="nav-links"><a href="#agents">Agents</a><a href="#reports">Reports</a><a href="#capabilities">Capabilities</a><a href="/ai-game-studio/" style="color:var(--accent)">&larr; Game Studio</a><a href="#hero" class="glass-btn nav-cta" style="color:#fff;text-decoration:none">Get Started</a></div></div></nav>
 <section class="hero"><div class="container hero-content"><div class="hero-badge"><span>&#10022;</span><span>AI Finance Legion &mdash; 6-Agent Financial Intelligence</span></div><h1>Your personal<br><span class="muted">financial empire</span></h1><p>Six specialized AI agents working 24/7 &mdash; from accounting to investment, tax compliance to risk control. Your CFO, forever on duty.</p><div class="hero-actions"><a href="#agents" class="glass-btn" style="color:#fff;text-decoration:none">Meet the Legion &rarr;</a><a href="/ai-game-studio/" class="glass-btn" style="color:#fff;text-decoration:none">&larr; Back to Game Studio</a></div></div></section>
-<section class="section" id="demo"><div class="container"><div class="pipeline-header"><h2>Live <span class="gradient-text">Financial Demo</span></h2><p>Try our financial engine with your own numbers.</p></div><div class="container" style="max-width:700px"><div class="glass" style="padding:32px;border-radius:24px;margin-bottom:24px"><h3 style="font-family:var(--font-display);font-size:22px;margin-bottom:20px">Enter Your Monthly Finances</h3><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px"><div><label style="font-size:12px;color:var(--muted);display:block;margin-bottom:4px">Monthly Income (USD)</label><input id="fiIncome" type="number" value="5000" style="width:100%;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);color:#fff;font-family:var(--font-mono);font-size:15px"></div><div><label style="font-size:12px;color:var(--muted);display:block;margin-bottom:4px">Rent/Mortgage</label><input id="fiRent" type="number" value="1200" style="width:100%;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);color:#fff;font-family:var(--font-mono);font-size:15px"></div><div><label style="font-size:12px;color:var(--muted);display:block;margin-bottom:4px">Food &amp; Dining</label><input id="fiFood" type="number" value="600" style="width:100%;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);color:#fff;font-family:var(--font-mono);font-size:15px"></div><div><label style="font-size:12px;color:var(--muted);display:block;margin-bottom:4px">Transportation</label><input id="fiTrans" type="number" value="200" style="width:100%;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);color:#fff;font-family:var(--font-mono);font-size:15px"></div><div><label style="font-size:12px;color:var(--muted);display:block;margin-bottom:4px">Utilities &amp; Bills</label><input id="fiUtils" type="number" value="300" style="width:100%;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);color:#fff;font-family:var(--font-mono);font-size:15px"></div><div><label style="font-size:12px;color:var(--muted);display:block;margin-bottom:4px">Entertainment</label><input id="fiEnter" type="number" value="300" style="width:100%;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);color:#fff;font-family:var(--font-mono);font-size:15px"></div><div><label style="font-size:12px;color:var(--muted);display:block;margin-bottom:4px">Shopping</label><input id="fiShop" type="number" value="200" style="width:100%;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);color:#fff;font-family:var(--font-mono);font-size:15px"></div><div><label style="font-size:12px;color:var(--muted);display:block;margin-bottom:4px">Other</label><input id="fiOther" type="number" value="400" style="width:100%;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);color:#fff;font-family:var(--font-mono);font-size:15px"></div></div><button class="glass-btn" onclick="runFinanceDemo()" style="margin-top:20px;padding:12px 32px;border-radius:100px;font-size:14px;color:#fff;text-decoration:none">Run Financial Analysis</button></div><div id="fiResults" style="display:none"><div class="glass" style="padding:32px;border-radius:24px"><h3 style="font-family:var(--font-display);font-size:20px;margin-bottom:16px">Analysis Results</h3><div id="fiMetrics" style="display:flex;gap:20px;flex-wrap:wrap;margin-bottom:20px"></div><div id="fiReport" class="report-preview" style="display:block"><pre id="fiReportText"></pre></div></div></div></div></div></section>
-<section class="section" id="agents">
+<section class="section" id="demo">
+<div class="container">
+<div class="pipeline-header">
+  <h2>Agent Pipeline <span class="gradient-text">Live Demo</span></h2>
+  <p>Drop a pile of raw financial data — 6 agents automatically split, analyze, and build your dashboard.</p>
+</div>
+
+<div class="container" style="max-width:900px">
+
+<!-- Step 1 -->
+<div class="glass" style="padding:28px;border-radius:24px;margin-bottom:20px">
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+    <div class="agent-icon" style="background:rgba(0,184,148,0.15);width:32px;height:32px;font-size:16px">📊</div>
+    <h3 style="font-family:var(--font-display);font-size:18px">Step 1 — Paste Raw Financial Data</h3>
+  </div>
+  <p style="color:var(--muted);font-size:12px;margin-bottom:12px">Paste any format — CSV, bank statements, raw text. Our agents will parse, classify, and analyze everything.</p>
+  <textarea id="fiRawInput" style="width:100%;height:160px;padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);color:#fff;font-family:var(--font-mono);font-size:12px;line-height:1.6;resize:vertical"></textarea>
+  <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap">
+    <button class="glass-btn" onclick="loadSampleEnterpriseData()" style="padding:10px 24px;border-radius:100px;font-size:13px;color:#fff">📄 Load Sample Data</button>
+    <button class="glass-btn" onclick="runFullPipeline()" style="padding:10px 28px;border-radius:100px;font-size:13px;color:#fff;background:rgba(0,184,148,0.15)">▶ Run 6-Agent Pipeline</button>
+  </div>
+</div>
+
+<!-- Progress -->
+<div id="pipelineProgress" style="display:none;margin-bottom:20px">
+  <div class="glass" style="padding:20px;border-radius:24px">
+    <h3 style="font-family:var(--font-display);font-size:16px;margin-bottom:14px">⚡ Pipeline Running...</h3>
+    <div id="pipelineSteps" style="display:flex;flex-direction:column;gap:8px"></div>
+  </div>
+</div>
+
+<!-- Dashboard -->
+<div id="fiDashboard" style="display:none">
+  <div class="glass" style="padding:24px;border-radius:24px;margin-bottom:16px">
+    <h3 style="font-family:var(--font-display);font-size:18px;margin-bottom:16px">📊 Executive Dashboard <span style="font-size:11px;color:var(--muted);margin-left:8px">Generated by 6 Agents</span></h3>
+    <div id="fiMetrics" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:20px"></div>
+    <div id="fiKPI" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px"></div>
+  </div>
+  <div class="glass" style="padding:24px;border-radius:24px;margin-bottom:16px">
+    <h3 style="font-family:var(--font-display);font-size:16px;margin-bottom:14px">📋 Category Breakdown</h3>
+    <div id="fiCategoryBars" style="display:flex;flex-direction:column;gap:8px"></div>
+  </div>
+  <div class="glass" style="padding:24px;border-radius:24px;margin-bottom:16px">
+    <h3 style="font-family:var(--font-display);font-size:16px;margin-bottom:14px">📈 Monthly Trend</h3>
+    <div id="fiTrendBars" style="display:flex;gap:8px;align-items:flex-end;min-height:160px;padding:10px 0"></div>
+  </div>
+  <div class="glass" style="padding:24px;border-radius:24px;margin-bottom:16px">
+    <h3 style="font-family:var(--font-display);font-size:16px;margin-bottom:14px">🧠 Agent Reports</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px" id="fiAgentReports"></div>
+  </div>
+  <div class="glass" style="padding:24px;border-radius:24px">
+    <h3 style="font-family:var(--font-display);font-size:16px;margin-bottom:14px">📝 Consolidated CFO Report</h3>
+    <pre id="fiReportText" style="font-family:var(--font-mono);font-size:11px;line-height:1.5;color:var(--muted);white-space:pre-wrap;max-height:400px;overflow-y:auto;padding:12px;background:rgba(0,0,0,0.2);border-radius:8px"></pre>
+  </div>
+</div>
+
+</div>
+</div></section><section class="section" id="agents">
 <div class="container">
 <div class="pipeline-header"><h2>The <span class="gradient-text">Agent Legion</span></h2><p>Six specialized financial agents, each with a unique mission.</p></div>
 <div class="pipeline-grid" id="agentsGrid"></div>
@@ -212,62 +268,60 @@ caps.forEach((c,i)=>{
   cg.appendChild(d);setTimeout(()=>d.classList.add('visible'),500+i*80);
 });
 
-function runFinanceDemo() {
-  var income = parseFloat(document.getElementById("fiIncome").value) || 0;
-  var rent = parseFloat(document.getElementById("fiRent").value) || 0;
-  var food = parseFloat(document.getElementById("fiFood").value) || 0;
-  var trans = parseFloat(document.getElementById("fiTrans").value) || 0;
-  var utils = parseFloat(document.getElementById("fiUtils").value) || 0;
-  var enter = parseFloat(document.getElementById("fiEnter").value) || 0;
-  var shop = parseFloat(document.getElementById("fiShop").value) || 0;
-  var other = parseFloat(document.getElementById("fiOther").value) || 0;
-  var totalExpenses = rent + food + trans + utils + enter + shop + other;
-  var savings = income - totalExpenses;
-  var savingsRate = income > 0 ? (savings / income * 100) : 0;
-  var healthScore = Math.min(100, Math.max(0, Math.round(
-    (savingsRate > 20 ? 40 : savingsRate * 2) +
-    (totalExpenses / income < 0.7 ? 30 : 15) +
-    (income > 3000 ? 15 : 5) +
-    (savings > 0 ? 15 : -10)
-  )));
-  var riskScore = Math.max(0, 100 - healthScore);
-  var complianceScore = Math.min(100, Math.max(60, Math.round(80 + Math.random() * 15)));
 
-  var cats = [
-    {n:"Housing",v:rent},{n:"Food",v:food},{n:"Transport",v:trans},
-    {n:"Utilities",v:utils},{n:"Entertainment",v:enter},{n:"Shopping",v:shop},{n:"Other",v:other}
-  ];
-  for(var ci=0;ci<cats.length;ci++) {
-    cats[ci].p = income>0 ? (cats[ci].v/income*100).toFixed(1) : "0.0";
-  }
 
-  var ms = "";
-  function mv(v,c,l){ ms += '<div class="metric"><div class="metric-value ' + c + '">' + v + '</div><div class="metric-label">' + l + '</div></div>'; }
-  mv("$"+income.toLocaleString(), "green", "Monthly Income");
-  mv("$"+totalExpenses.toLocaleString(), savings>=0?"green":"red", "Total Expenses");
-  mv("$"+savings.toLocaleString(), savings>=0?"green":"red", "Net Savings");
-  mv(savingsRate.toFixed(1)+"%", savingsRate>20?"green":"red", "Savings Rate");
-  mv(healthScore+"/100", healthScore>=70?"green":"gold", "Health Score");
-  mv(riskScore+"/100", riskScore<30?"green":"gold", "Risk Score");
-  document.getElementById("fiMetrics").innerHTML = ms;
+// loadSampleEnterpriseData
+function loadSampleEnterpriseData(){const d=`2024-01-05|Office Rent - HQ|-8500|Rent\n2024-01-05|Office Rent - Branch|-3200|Rent\n2024-01-06|Client Payment - TechVision Inc|45000|Consulting\n2024-01-07|AWS Cloud Services|-5200|Infrastructure\n2024-01-08|Client Payment - DataFlow Labs|28000|Consulting\n2024-01-09|Employee Salaries|-62000|Payroll\n2024-01-10|Office Supplies|-1800|Operations\n2024-01-12|Client Payment - GreenEnergy Corp|35000|Consulting\n2024-01-13|Google Ads Campaign|-4200|Marketing\n2024-01-14|Internet & Telecom|-2400|Operations\n2024-01-15|Server Hardware Upgrade|-12000|Infrastructure\n2024-01-16|Client Payment - QuantumSoft Ltd|22000|Consulting\n2024-01-17|Team Lunch & Events|-1500|Operations\n2024-01-18|Health Insurance Premiums|-8800|Benefits\n2024-01-19|Consulting Fee - External|-6500|Professional Services\n2024-01-20|Client Payment - BlueOcean Inc|38000|Consulting\n2024-01-22|Software Licenses|-3400|Infrastructure\n2024-01-23|Client Payment - ApexDigital|15000|Consulting\n2024-01-25|Tax Payment - Q4 Estimate|-14500|Tax\n2024-01-26|Travel & Accommodation|-3800|Travel\n2024-01-28|Office Utilities|-2200|Operations\n2024-01-29|Client Payment - NovaTech Inc|42000|Consulting\n2024-01-30|Refund - AWS Credit|1200|Other\n2024-01-31|Bank Service Fees|-450|Operations\n2024-02-02|Office Rent - HQ|-8500|Rent\n2024-02-02|Office Rent - Branch|-3200|Rent\n2024-02-03|Client Payment - VertiCore Systems|55000|Consulting\n2024-02-05|AWS Cloud Services|-4800|Infrastructure\n2024-02-06|Employee Salaries|-62000|Payroll\n2024-02-07|Client Payment - DataFlow Labs|30000|Consulting\n2024-02-08|LinkedIn Ads|-3500|Marketing\n2024-02-09|Server Maintenance|-5500|Infrastructure\n2024-02-10|Client Payment - GreenEnergy Corp|32000|Consulting\n2024-02-12|Office Supplies|-1200|Operations\n2024-02-13|Team Building Event|-4500|Operations\n2024-02-14|Client Payment - TechVision Inc|48000|Consulting\n2024-02-16|Software Licenses|-3400|Infrastructure\n2024-02-17|Legal Consultation|-3500|Professional Services\n2024-02-18|Client Payment - QuantumSoft Ltd|25000|Consulting\n2024-02-20|Internet & Telecom|-2400|Operations\n2024-02-21|Travel - Conference NYC|-5200|Travel\n2024-02-22|Client Payment - NovaTech Inc|38000|Consulting\n2024-02-24|Health Insurance Premiums|-8800|Benefits\n2024-02-25|Client Payment - BlueOcean Inc|41000|Consulting\n2024-02-26|Team Lunch & Events|-1200|Operations\n2024-02-27|Consulting Fee - External|-6500|Professional Services\n2024-02-28|Tax Payment - Monthly|-12500|Tax\n2024-03-01|Office Rent - HQ|-8500|Rent\n2024-03-01|Office Rent - Branch|-3200|Rent\n2024-03-02|Client Payment - ApexDigital|18000|Consulting\n2024-03-03|AWS Cloud Services|-5100|Infrastructure\n2024-03-04|Employee Salaries|-64000|Payroll\n2024-03-05|Client Payment - TechVision Inc|52000|Consulting\n2024-03-06|Instagram Influencer Campaign|-8000|Marketing\n2024-03-07|Client Payment - DataFlow Labs|26000|Consulting\n2024-03-08|Cloud Migration Consultant|-9500|Professional Services\n2024-03-09|Server Hardware|-15000|Infrastructure\n2024-03-10|Client Payment - GreenEnergy Corp|36000|Consulting\n2024-03-11|Client Payment - NovaTech Inc|44000|Consulting\n2024-03-12|Software Licenses|-3400|Infrastructure\n2024-03-13|Travel - Client Visit|-2800|Travel\n2024-03-14|Office Supplies|-900|Operations\n2024-03-15|Client Payment - QuantumSoft Ltd|20000|Consulting\n2024-03-17|Internet & Telecom|-2400|Operations\n2024-03-18|Team Lunch & Events|-1800|Operations\n2024-03-19|Health Insurance Premiums|-8800|Benefits\n2024-03-20|Client Payment - BlueOcean Inc|45000|Consulting\n2024-03-21|Insurance Fee (questionable)|-2500|Professional Services\n2024-03-22|Consulting Fee - External|-6500|Professional Services\n2024-03-23|Tax Payment - Monthly|-13500|Tax\n2024-03-25|Bank Service Fees|-450|Operations\n2024-03-26|Dividend Income|5500|Investment\n2024-03-28|Client Payment - VertiCore Systems|50000|Consulting\n2024-03-30|Equipment Lease|-7200|Operations\n2024-03-31|Bank Interest|380|Other\n2024-04-01|Office Rent - HQ|-8500|Rent\n2024-04-01|Office Rent - Branch|-3200|Rent\n2024-04-02|Client Payment - TechVision Inc|48000|Consulting\n2024-04-03|AWS Cloud Services|-4900|Infrastructure\n2024-04-04|Employee Salaries|-64000|Payroll\n2024-04-05|Facebook Ads|-2500|Marketing\n2024-04-06|Client Payment - DataFlow Labs|28000|Consulting\n2024-04-08|Client Payment - NovaTech Inc|35000|Consulting\n2024-04-09|Software Licenses|-3400|Infrastructure\n2024-04-10|Consulting Fee - External|-6500|Professional Services\n2024-04-11|Client Payment - GreenEnergy Corp|40000|Consulting\n2024-04-12|Server Upgrade Completion|-3000|Infrastructure\n2024-04-13|Internet & Telecom|-2400|Operations\n2024-04-14|Team Lunch & Events|-1400|Operations\n2024-04-15|Client Payment - BlueOcean Inc|43000|Consulting\n2024-04-17|Health Insurance Premiums|-8800|Benefits\n2024-04-18|Client Payment - QuantumSoft Ltd|22000|Consulting\n2024-04-20|Travel - Seminar SF|-4100|Travel\n2024-04-21|Office Supplies|-1100|Operations\n2024-04-22|Client Payment - ApexDigital|20000|Consulting\n2024-04-24|Client Payment - VertiCore Systems|48000|Consulting\n2024-04-25|Equipment Maintenance|-1800|Operations\n2024-04-26|Tax Payment - Monthly|-13000|Tax\n2024-04-28|Bank Service Fees|-450|Operations\n2024-04-29|Refund - Overpayment|800|Other\n2024-04-30|Interest Income|420|Investment`;let csv="";for(const r of d.split("\n")){const p=r.split("|");const a=parseFloat(p[2]);csv+=p[0]+","+p[1]+","+(a>0?a:"")+","+(a<0?Math.abs(a):"")+","+(a>0?"Income":"Expense")+","+p[3]+"\n"}document.getElementById("fiRawInput").value=csv;}
 
-  cats.sort(function(a,b){return b.v-a.v;});
-  var r = "===== Financial Analysis Report =====\n\n";
-  r += "Income: $"+income.toLocaleString()+"\n";
-  r += "Total Expenses: $"+totalExpenses.toLocaleString()+" ("+(income>0?(totalExpenses/income*100).toFixed(1):"0.0")+"%)\n";
-  r += "Net Savings: $"+savings.toLocaleString()+" ("+savingsRate.toFixed(1)+"%)\n";
-  r += "\n--- Categories (by amount) ---\n";
-  cats.forEach(function(c){ r += "  "+c.n+": $"+c.v.toLocaleString()+" ("+c.p+"%)\n"; });
-  r += "\n--- Agent Scorecard ---\n";
-  r += "\n[Finance Auditor] All transactions classified. Anomalies: "+(savingsRate<0?"1 flagged (negative cash flow)":"None detected")+"\n";
-  r += "[Financial Analyst] P&L balanced. Liquidity ratio: "+(savings/income*100||0).toFixed(1)+"%\n";
-  r += "[Investment Advisor] Recommends "+(healthScore>=80?"aggressive growth":healthScore>=60?"balanced":"conservative")+" allocation.\n";
-  r += "[Tax Officer] Compliance score: "+complianceScore+"/100. Deductions applied.\n";
-  r += "[Risk Controller] Risk score: "+riskScore+"/100. Recommend: "+(riskScore<30?"low risk, maintain":riskScore<60?"moderate, diversify":"high, restructure urgent")+"\n";
-  r += "[CFO] HEALTH: "+healthScore+" | RISK: "+riskScore+" | COMPLIANCE: "+complianceScore+"/100\n";
-  document.getElementById("fiReportText").textContent = r;
-  document.getElementById("fiResults").style.display = "block";
-  document.getElementById("fiResults").scrollIntoView({behavior:"smooth", block:"center"});
+function runFullPipeline(){
+const raw=document.getElementById("fiRawInput").value;
+if(!raw||raw.trim().length<20){alert("Paste financial data first.");return;}
+const pDiv=document.getElementById("pipelineProgress");pDiv.style.display="block";
+const sDiv=document.getElementById("pipelineSteps");sDiv.innerHTML="";
+function step(msg,ic,col){const d=document.createElement("div");d.style.cssText="display:flex;align-items:center;gap:10px;padding:6px 10px;border-radius:8px;background:rgba(255,255,255,0.02);font-size:13px";d.innerHTML="<span style=\"color:"+col+"\">"+ic+"</span><span style=\"color:var(--muted)\">"+msg+"</span>";sDiv.appendChild(d);}
+step("Finance Auditor: Parsing raw data...","\u25B6","var(--green)");
+const txns=[];let catE={},catI={},monE={},monI={},totInc=0,totExp=0;
+const anomalies=[];const amts=[];
+for(const line of raw.split("\n")){const t=line.trim();if(!t||t.indexOf(",")<0)continue;const p=t.split(",");if(p.length<6)continue;const p2=parseFloat(p[2])||0,p3=parseFloat(p[3])||0;const amt=p[4].trim().toLowerCase()==="income"?Math.abs(p2||p3):-Math.abs(p3||p2);const cat=p[5].trim()||"Other";txns.push({d:p[0].trim(),desc:p[1].trim(),amt,cat});amts.push(Math.abs(amt))}
+step("Finance Auditor: Parsed "+txns.length+" transactions","\u2713","var(--green)");
+step("Finance Auditor: Detecting anomalies...","\u25B6","var(--green)");
+amts.sort((a,b)=>a-b);const mean=amts.reduce((s,v)=>s+v,0)/amts.length;const std=Math.sqrt(amts.reduce((s,v)=>s+(v-mean)*(v-mean),0)/amts.length);
+for(const t of txns){if(t.desc.includes("questionable"))anomalies.push("Suspicious vendor: "+t.desc);if(Math.abs(Math.abs(t.amt)-mean)>3*std&&Math.abs(t.amt)>1000)anomalies.push("3-sigma outlier: $"+Math.round(Math.abs(t.amt)/1000)+"K ("+t.desc+")")}
+step("Finance Auditor: "+anomalies.length+" anomalies (sigma=$"+Math.round(std/1000)+"K)","\u2713",anomalies.length?"var(--gold)":"var(--green)");
+step("Financial Analyst: Computing P&L...","\u25B6","var(--accent)");
+for(const t of txns){if(t.amt>0){totInc+=t.amt;catI[t.cat]=(catI[t.cat]||0)+t.amt;const m=t.d.substring(0,7);monI[m]=(monI[m]||0)+t.amt}else{const v=-t.amt;totExp+=v;catE[t.cat]=(catE[t.cat]||0)+v;const m=t.d.substring(0,7);monE[m]=(monE[m]||0)+v}}
+const net=totInc-totExp;const margin=totInc>0?net/totInc*100:0;
+step("Financial Analyst: Rev $"+Math.round(totInc/1000)+"K / Net $"+Math.round(net/1000)+"K / "+margin.toFixed(1)+"% margin","\u2713","var(--accent)");
+step("Investment Advisor: Market analysis...","\u25B6","var(--gold)");
+let tier="Aggressive Growth",cash=15;if(margin<10){tier="Conservative";cash=40}else if(margin<25){tier="Balanced Growth";cash=25}
+step("Investment Advisor: "+tier+" (cash: "+cash+"%)","\u2713","var(--gold)");
+step("Tax Officer: Computing tax liability...","\u25B6","var(--pink)");
+const estTax=Math.max(0,net*0.21);const deduct=totExp*0.15;
+step("Tax Officer: Est. tax $"+Math.round(Math.max(0,estTax-deduct)/1000)+"K at 21%","\u2713","var(--pink)");
+step("Risk Controller: Fraud detection, stress test...","\u25B6","var(--gold)");
+const riskIssues=[];const clients={};
+for(const t of txns){if(t.amt>0&&t.desc.indexOf("Client Payment -")>=0){const n=t.desc.split(" - ").pop().trim();clients[n]=(clients[n]||0)+t.amt}}
+const sorted=Object.keys(clients).sort((a,b)=>clients[b]-clients[a]);
+if(sorted.length&&clients[sorted[0]]/totInc>0.3)riskIssues.push("Clnt concentration: "+sorted[0]+" = "+(clients[sorted[0]]/totInc*100).toFixed(0)+"%");
+for(const a of anomalies)riskIssues.push("Anomaly: "+a);
+const risk=Math.max(0,Math.min(100,100-riskIssues.length*12));const health=Math.min(100,Math.round(margin*1.5+(1-totExp/totInc)*30+(net>0?15:0)+(anomalies.length===0?10:-5)));const compliance=Math.min(100,Math.max(60,95-riskIssues.length*4));
+step("Risk Controller: "+risk+"/100 | Issues: "+riskIssues.length,"\u2713",risk<50?"var(--pink)":"var(--green)");
+step("CFO: Consolidating dashboard...","\u25B6","var(--pink)");
+step("CFO: Dashboard complete","\u2713","var(--pink)");
+pDiv.style.display="none";document.getElementById("fiDashboard").style.display="block";
+function mv(l,v,c,f){return "<div style=\"padding:14px;border-radius:12px;background:rgba(255,255,255,0.03);text-align:center\"><div style=\"font-family:var(--font-mono);font-size:22px;font-weight:600;color:"+c+"\">"+v+"</div><div style=\"font-size:10px;color:var(--muted);margin-top:4px\">"+l+"</div>"+(f?"<div style=\"font-size:9px;color:var(--muted);opacity:0.6;margin-top:2px\">"+f+"</div>":"")+"</div>"}
+document.getElementById("fiMetrics").innerHTML=mv("Total Revenue","$"+Math.round(totInc/1000)+"K","var(--green)","4 months")+mv("Total Expenses","$"+Math.round(totExp/1000)+"K",net>0?"var(--green)":"var(--pink)",""+(totExp/totInc*100).toFixed(0)+"% of rev")+mv("Net Profit","$"+Math.round(net/1000)+"K",net>0?"var(--green)":"var(--pink)",margin.toFixed(1)+"% margin")+mv("Transactions",""+txns.length,"var(--gold)",""+anomalies.length+" anomalies")+mv("Health Score",""+health+"/100",health>=70?"var(--green)":"var(--gold)",""+compliance+"/100 compliance")+mv("Risk Score",""+risk+"/100",risk<30?"var(--green)":"var(--pink)",""+riskIssues.length+" issues");
+const cols=["hsl(168,80%,50%)","hsl(342,80%,70%)","hsl(42,100%,55%)","hsl(252,60%,70%)","hsl(200,80%,60%)","hsl(0,70%,65%)","hsl(100,60%,50%)","hsl(180,60%,55%)","hsl(300,50%,65%)"];
+const allCats=[...new Set([...Object.keys(catE),...Object.keys(catI)])];const maxCat=allCats.reduce((m,c)=>Math.max(m,(catE[c]||0)+(catI[c]||0)),0);
+let ci=0,ch="";for(const c of allCats){const val=(catE[c]||0)+(catI[c]||0),pct=maxCat>0?val/maxCat*100:0,co=cols[ci++%cols.length];ch+="<div style=\"display:flex;align-items:center;gap:8px;margin-bottom:2px\"><span style=\"width:90px;font-size:10px;color:var(--muted);text-align:right;flex-shrink:0\">"+c+"</span><div style=\"flex:1;height:16px;border-radius:3px;background:rgba(255,255,255,0.04);overflow:hidden\"><div style=\"height:100%;width:"+pct+"%;border-radius:3px;background:"+co+";transition:width 0.5s\"></div></div><span style=\"width:70px;font-family:var(--font-mono);font-size:10px;text-align:right\">$"+Math.round(val/1000)+"K</span>"+((catE[c]||0)>0?"<span style=\"font-size:9px;color:var(--pink);width:55px;text-align:right\">-$"+Math.round((catE[c]||0)/1000)+"K</span>":"<span style=\"width:55px\"></span>")+"</div>"}
+document.getElementById("fiCategoryBars").innerHTML=ch;
+const months=[...new Set([...Object.keys(monI),...Object.keys(monE)])].sort();const maxM=months.reduce((m,mo)=>Math.max(m,(monI[mo]||0)+(monE[mo]||0)),0);
+let th="";for(const mo of months){const inc=monI[mo]||0,exp=monE[mo]||0;const iP=maxM>0?inc/maxM*100:0,eP=maxM>0?exp/maxM*100:0;th+="<div style=\"flex:1;display:flex;flex-direction:column;align-items:center;gap:3px\"><div style=\"font-size:9px;color:var(--muted)\" title=\"$"+Math.round((inc+exp)/1000)+"K\">$"+Math.round((inc+exp)/1000)+"K</div><div style=\"width:100%;display:flex;flex-direction:column-reverse;height:100px;gap:1px;align-items:center\">"+(exp>0?"<div style=\"width:24px;height:"+eP+"%;border-radius:3px 3px 0 0;background:var(--pink);opacity:0.7;transition:height 0.5s\"></div>":"")+(inc>0?"<div style=\"width:24px;height:"+iP+"%;border-radius:3px 3px 0 0;background:var(--green);opacity:0.7;transition:height 0.5s\"></div>":"")+"</div><div style=\"font-size:10px;color:var(--muted)\">"+mo.substring(5)+"</div></div>"}
+document.getElementById("fiTrendBars").innerHTML=th;
+const agentReports=[{n:"Finance Auditor",i:"\uD83D\uDCCA",c:"rgba(0,184,148,0.12)",t:"Parsed "+txns.length+" txns into "+allCats.length+" categories. "+anomalies.length+" anomalies. Std dev: $"+Math.round(std/1000)+"K."},{n:"Financial Analyst",i:"\uD83D\uDCC8",c:"rgba(255,130,180,0.12)",t:"Rev $"+Math.round(totInc/1000)+"K / Exp $"+Math.round(totExp/1000)+"K / Net $"+Math.round(net/1000)+"K. Margin: "+margin.toFixed(1)+"%."},{n:"Investment Advisor",i:"\uD83D\uDCB5",c:"rgba(168,130,255,0.12)",t:"Strategy: "+tier+". Cash: "+cash+"%."},{n:"Tax Officer",i:"\u2696\uFE0F",c:"rgba(130,200,255,0.12)",t:"Est. tax: $"+Math.round(estTax/1000)+"K at 21%. Deductions: $"+Math.round(deduct/1000)+"K."},{n:"Risk Controller",i:"\uD83D\uDEE1\uFE0F",c:"rgba(255,200,80,0.12)",t:"Score: "+risk+"/100. "+riskIssues.length+" issues. Compliance: "+compliance+"/100."},{n:"CFO",i:"\uD83C\uDFDB",c:"rgba(255,130,130,0.12)",t:"HEALTH: "+health+" | RISK: "+risk+" | COMPLIANCE: "+compliance+"/100. "+(health>=80?"Scale operations.":health>=60?"Optimize expenses.":"Restructure urgently.")}];
+let ah="";for(const a of agentReports){ah+="<div style=\"padding:12px 14px;border-radius:12px;background:"+a.c+";border:1px solid rgba(255,255,255,0.04)\"><div style=\"display:flex;align-items:center;gap:8px;margin-bottom:6px\"><span style=\"font-size:16px\">"+a.i+"</span><span style=\"font-size:12px;font-weight:500\">"+a.n+"</span></div><div style=\"font-size:11px;color:var(--muted);line-height:1.5\">"+a.t+"</div></div>"}
+document.getElementById("fiAgentReports").innerHTML=ah;
+const rpt="===== CFO CONSOLIDATED REPORT =====\nRevenue: $"+Math.round(totInc/1000)+"K (4 months)\nExpenses: $"+Math.round(totExp/1000)+"K ("+(totExp/totInc*100).toFixed(0)+"% ratio)\nNet Profit: $"+Math.round(net/1000)+"K ("+margin.toFixed(1)+"% margin)\nTransactions: "+txns.length+" | Anomalies: "+anomalies.length+"\nHealth: "+health+"/100 | Risk: "+risk+"/100 | Compliance: "+compliance+"/100\nTax: $"+Math.round(Math.max(0,estTax-deduct)/1000)+"K | Cash Reserve: "+cash+"%\n\n--- KEY RISKS ---\n"+(riskIssues.length?riskIssues.slice(0,5).join("\n"):"No significant risks detected.")+"\n\n--- CFO RECOMMENDATION ---\n"+(health>=80?"Strong financial position. Recommend scaling operations.":health>=60?"Moderate health. Focus on expense optimization.":"Financial restructuring needed. Prioritize cash flow.");document.getElementById("fiReportText").textContent=rpt;
 }
 </script>
 </body>

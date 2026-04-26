@@ -1,0 +1,6 @@
+src = open(r'C:\Users\KING\.qclaw\workspace\ai-finance-legion\index.html', 'r', encoding='utf-8').read()
+print('size:', len(src))
+print('has runFullPipeline:', 'runFullPipeline' in src)
+print('has loadSampleEnterpriseData:', 'loadSampleEnterpriseData' in src)
+print('has id="demo":', 'id="demo"' in src)
+print('has runFinanceDemo:', 'runFinanceDemo' in src)
