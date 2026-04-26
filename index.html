@@ -197,7 +197,7 @@ function runFinanceDemo() {
   )));
   var riskScore = Math.max(0, 100 - healthScore);
   var complianceScore = Math.min(100, Math.max(60, Math.round(80 + Math.random() * 15)));
-  
+
   var categories = [
     {n:'Housing', v:rent, p:0},
     {n:'Food', v:food, p:0},
@@ -210,10 +210,42 @@ function runFinanceDemo() {
   for(var ci=0;ci<categories.length;ci++) {
     categories[ci].p = income>0 ? (categories[ci].v/income*100).toFixed(1) : '0.0';
   }
-  
+
   var ms = '';
   var metrics = [
-    {v:'
+    {v:'$' + income.toLocaleString(), c:'green', l:'Monthly Income'},
+    {v:'$' + totalExpenses.toLocaleString(), c:savings>=0?'green':'red', l:'Total Expenses'},
+    {v:'$' + savings.toLocaleString(), c:savings>=0?'green':'red', l:'Net Savings'},
+    {v:savingsRate.toFixed(1) + '%', c:savingsRate>20?'green':'red', l:'Savings Rate'},
+    {v:healthScore + '/100', c:healthScore>=70?'green':'gold', l:'Health Score'},
+    {v:riskScore + '/100', c:riskScore<30?'green':'gold', l:'Risk Score'},
+  ];
+  metrics.forEach(function(m) {
+    ms += '<div class="metric"><div class="metric-value ' + m.c + '">' + m.v + '</div><div class="metric-label">' + m.l + '</div></div>';
+  });
+  document.getElementById('fiMetrics').innerHTML = ms;
+
+  categories.sort(function(a,b) { return b.v - a.v; });
+  var report = '===== Financial Analysis Report =====\n\n';
+  report += 'Income: $' + income.toLocaleString() + '\n';
+  report += 'Total Expenses: $' + totalExpenses.toLocaleString() + ' (' + (income>0?(totalExpenses/income*100).toFixed(1):'0.0') + '%)\n';
+  report += 'Net Savings: $' + savings.toLocaleString() + ' (' + savingsRate.toFixed(1) + '%)\n';
+  report += '\n--- Categories (by amount) ---\n';
+  categories.forEach(function(c) { report += '  ' + c.n + ': $' + c.v.toLocaleString() + ' (' + c.p + '%)\n'; });
+  report += '\n--- Agent Scorecard ---\n';
+  report += '\n[Finance Auditor] All transactions classified. Anomalies: ' + (savingsRate<0?'1 flagged (negative cash flow)':'None detected') + '\n';
+  report += '[Financial Analyst] P&L balanced. Liquidity ratio: ' + (savings/income*100||0).toFixed(1) + '%\n';
+  report += '[Investment Advisor] Recommends ' + (healthScore>=80?'aggressive growth':healthScore>=60?'balanced':'conservative') + ' allocation.\n';
+  report += '[Tax Officer] Compliance score: ' + complianceScore + '/100. Deductions applied.\n';
+  report += '[Risk Controller] Risk score: ' + riskScore + '/100. Recommend: ' + (riskScore<30?'low risk, maintain':riskScore<60?'moderate, diversify':'high, restructure urgent') + '\n';
+  report += '[CFO] HEALTH: ' + healthScore + ' | RISK: ' + riskScore + ' | COMPLIANCE: ' + complianceScore + '/100\n';
+
+  document.getElementById('fiReportText').textContent = report;
+  document.getElementById('fiResults').style.display = 'block';
+  document.getElementById('fiResults').scrollIntoView({behavior:'smooth', block:'center'});
+}
+
+
 // Starfield
 const c=document.getElementById('bg-canvas'),cx=c.getContext('2d');let st=[];
 function rs(){c.width=window.innerWidth;c.height=window.innerHeight}
