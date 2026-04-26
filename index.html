@@ -96,8 +96,44 @@ footer{padding:40px 0}
 </style>
 </head>
 <body>
-<nav id="navbar"><div class="container nav-inner"><a href="#" class="logo">&#10022; AI <span class="gradient-text">Finance Legion</span></a><div class="nav-links"><a href="#agents">Agents</a><a href="#reports">Reports</a><a href="#capabilities">Capabilities</a><a href="/ai-game-studio/" style="color:var(--accent)">&larr; Game Studio</a><a href="#hero" class="glass-btn nav-cta" style="color:#fff;text-decoration:none">Get Started</a></div></div></nav>
+<nav id="navbar"><div class="container nav-inner"><a href="#" class="logo">&#10022; AI <span class="gradient-text">Finance Legion</span></a><div class="nav-links"><a href="#demo">Demo</a><a href="#agents">Agents</a><a href="#reports">Reports</a><a href="#capabilities">Capabilities</a><a href="/ai-game-studio/" style="color:var(--accent)">&larr; Game Studio</a><a href="#hero" class="glass-btn nav-cta" style="color:#fff;text-decoration:none">Get Started</a></div></div></nav>
 <section class="hero"><div class="container hero-content"><div class="hero-badge"><span>&#10022;</span><span>AI Finance Legion &mdash; 6-Agent Financial Intelligence</span></div><h1>Your personal<br><span class="muted">financial empire</span></h1><p>Six specialized AI agents working 24/7 &mdash; from accounting to investment, tax compliance to risk control. Your CFO, forever on duty.</p><div class="hero-actions"><a href="#agents" class="glass-btn" style="color:#fff;text-decoration:none">Meet the Legion &rarr;</a><a href="/ai-game-studio/" class="glass-btn" style="color:#fff;text-decoration:none">&larr; Back to Game Studio</a></div></div></section>
+
+<section class="section" id="demo">
+<div class="container">
+<div class="pipeline-header"><h2>Live <span class="gradient-text">Financial Demo</span></h2><p>Try our financial engine with your own numbers.</p></div>
+<div class="container" style="max-width:700px">
+<div class="glass" style="padding:32px;border-radius:24px;margin-bottom:24px">
+<h3 style="font-family:var(--font-display);font-size:22px;margin-bottom:20px">Enter Your Monthly Finances</h3>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+<div><label style="font-size:12px;color:var(--muted);display:block;margin-bottom:4px">Monthly Income (USD)</label>
+<input id="fiIncome" type="number" value="5000" style="width:100%;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);color:#fff;font-family:var(--font-mono);font-size:15px"></div>
+<div><label style="font-size:12px;color:var(--muted);display:block;margin-bottom:4px">Rent/Mortgage</label>
+<input id="fiRent" type="number" value="1200" style="width:100%;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);color:#fff;font-family:var(--font-mono);font-size:15px"></div>
+<div><label style="font-size:12px;color:var(--muted);display:block;margin-bottom:4px">Food & Dining</label>
+<input id="fiFood" type="number" value="600" style="width:100%;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);color:#fff;font-family:var(--font-mono);font-size:15px"></div>
+<div><label style="font-size:12px;color:var(--muted);display:block;margin-bottom:4px">Transportation</label>
+<input id="fiTrans" type="number" value="200" style="width:100%;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);color:#fff;font-family:var(--font-mono);font-size:15px"></div>
+<div><label style="font-size:12px;color:var(--muted);display:block;margin-bottom:4px">Utilities & Bills</label>
+<input id="fiUtils" type="number" value="300" style="width:100%;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);color:#fff;font-family:var(--font-mono);font-size:15px"></div>
+<div><label style="font-size:12px;color:var(--muted);display:block;margin-bottom:4px">Entertainment</label>
+<input id="fiEnter" type="number" value="300" style="width:100%;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);color:#fff;font-family:var(--font-mono);font-size:15px"></div>
+<div><label style="font-size:12px;color:var(--muted);display:block;margin-bottom:4px">Shopping</label>
+<input id="fiShop" type="number" value="200" style="width:100%;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);color:#fff;font-family:var(--font-mono);font-size:15px"></div>
+<div><label style="font-size:12px;color:var(--muted);display:block;margin-bottom:4px">Other</label>
+<input id="fiOther" type="number" value="400" style="width:100%;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);color:#fff;font-family:var(--font-mono);font-size:15px"></div>
+</div>
+<button class="glass-btn" onclick="runFinanceDemo()" style="margin-top:20px;padding:12px 32px;border-radius:100px;font-size:14px;color:#fff;text-decoration:none">Run Financial Analysis</button>
+</div>
+<div id="fiResults" style="display:none">
+<div class="glass" style="padding:32px;border-radius:24px">
+<h3 style="font-family:var(--font-display);font-size:20px;margin-bottom:16px">Analysis Results</h3>
+<div id="fiMetrics" style="display:flex;gap:20px;flex-wrap:wrap;margin-bottom:20px"></div>
+<div id="fiReport" class="report-preview" style="display:block"><pre id="fiReportText"></pre></div>
+</div>
+</div>
+</div>
+</div></section>
 <section class="section" id="agents">
 <div class="container">
 <div class="pipeline-header"><h2>The <span class="gradient-text">Agent Legion</span></h2><p>Six specialized financial agents, each with a unique mission.</p></div>
@@ -141,6 +177,603 @@ footer{padding:40px 0}
 <canvas id="bg-canvas" style="position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none"></canvas>
 
 <script>
+function runFinanceDemo() {
+  var income = parseFloat(document.getElementById('fiIncome').value) || 0;
+  var rent = parseFloat(document.getElementById('fiRent').value) || 0;
+  var food = parseFloat(document.getElementById('fiFood').value) || 0;
+  var trans = parseFloat(document.getElementById('fiTrans').value) || 0;
+  var utils = parseFloat(document.getElementById('fiUtils').value) || 0;
+  var enter = parseFloat(document.getElementById('fiEnter').value) || 0;
+  var shop = parseFloat(document.getElementById('fiShop').value) || 0;
+  var other = parseFloat(document.getElementById('fiOther').value) || 0;
+  var totalExpenses = rent + food + trans + utils + enter + shop + other;
+  var savings = income - totalExpenses;
+  var savingsRate = income > 0 ? (savings / income * 100) : 0;
+  var healthScore = Math.min(100, Math.max(0, Math.round(
+    (savingsRate > 20 ? 40 : savingsRate * 2) +
+    (totalExpenses / income < 0.7 ? 30 : 15) +
+    (income > 3000 ? 15 : 5) +
+    (savings > 0 ? 15 : -10)
+  )));
+  var riskScore = Math.max(0, 100 - healthScore);
+  var complianceScore = Math.min(100, Math.max(60, Math.round(80 + Math.random() * 15)));
+  
+  var categories = [
+    {n:'Housing', v:rent, p:0},
+    {n:'Food', v:food, p:0},
+    {n:'Transport', v:trans, p:0},
+    {n:'Utilities', v:utils, p:0},
+    {n:'Entertainment', v:enter, p:0},
+    {n:'Shopping', v:shop, p:0},
+    {n:'Other', v:other, p:0},
+  ];
+  for(var ci=0;ci<categories.length;ci++) {
+    categories[ci].p = income>0 ? (categories[ci].v/income*100).toFixed(1) : '0.0';
+  }
+  
+  var ms = '';
+  var metrics = [
+    {v:'
+// Starfield
+const c=document.getElementById('bg-canvas'),cx=c.getContext('2d');let st=[];
+function rs(){c.width=window.innerWidth;c.height=window.innerHeight}
+window.addEventListener('resize',rs);rs();
+const ct=Math.max(180,Math.floor((c.width*c.height)/8000));
+for(let i=0;i<ct;i++){st.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.2+0.3,a:Math.random()*0.6+0.2})}
+function dr(){cx.clearRect(0,0,c.width,c.height);
+for(const s of st){cx.beginPath();cx.arc(s.x,s.y,s.r,0,Math.PI*2);
+cx.fillStyle='rgba(255,255,255,'+s.a+')';cx.fill();
+s.a+=(Math.random()-0.48)*0.02;if(s.a<0.1)s.a=0.1;if(s.a>0.9)s.a=0.9}
+requestAnimationFrame(dr)}dr();
+
+// Nav scroll
+window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>60)});
+
+// Agents
+const agents=[
+{n:'AGENT 1',i:'馃搳',b:'rgba(0,184,148,0.12)',nm:'Finance Auditor',d:'Cleans & classifies your transaction data, flags anomalies',dd:'Imports raw data from any source, auto-detects categories, removes duplicates, flags micro-transactions, integer large transfers, after-hours activity, 3+sigma outliers.',inp:'Raw data',out:'Classified ledger'},
+{n:'AGENT 2',i:'馃搱',b:'rgba(255,130,180,0.12)',nm:'Financial Analyst',d:'Generates P&L, balance sheet, cash flow, key ratios',dd:'Transforms ledger to professional-grade P&L, Balance Sheet, Cash Flow, with liquidity/profitability/efficiency ratios.',inp:'Ledger',out:'Reports + ratios'},
+{n:'AGENT 3',i:'馃挕',b:'rgba(168,130,255,0.12)',nm:'Investment Advisor',d:'Real-time market research + personal portfolio',dd:'Uses neodata-financial-search for live stock quotes, fund NAVs. Recommends asset allocation with stop-loss levels.',inp:'Reports + risk profile',out:'Allocation + picks'},
+{n:'AGENT 4',i:'鈿栵笍',b:'rgba(130,200,255,0.12)',nm:'Tax Officer',d:'Tax calculation, invoice compliance, optimization',dd:'Calculates all taxes with deductions. Checks invoices for fraud patterns: round numbers, industry mismatch, sequential serials.',inp:'Ledger + info',out:'Tax report'},
+{n:'AGENT 5',i:'馃洝锔?,b:'rgba(255,200,80,0.12)',nm:'Risk Controller',d:'Fraud detection, compliance audit, stress test',dd:'Scans for fraud, audits compliance, checks vendor pricing, runs income interruption stress tests (3/6/12mo).',inp:'All pipeline data',out:'Risk score'},
+{n:'AGENT 6',i:'馃',b:'rgba(255,130,130,0.12)',nm:'CFO',d:'Synthesizes everything into executive summary + action plan',dd:'The commander. Executive Summary, Full Report, Action Items, 4-score Dashboard: Health/Compliance/Risk/Investment.',inp:'All agent outputs',out:'Final report + action plan'},
+];
+
+function renderAgent(a,i){
+  const d=document.createElement('div');
+  d.className='glass agent-card reveal';
+  d.innerHTML='<span class="agent-num">'+a.n+'</span><div class="agent-icon" style="background:'+a.b+'">'+a.i+'</div><div style="flex:1;min-width:0"><div class="agent-name">'+a.nm+'</div><div class="agent-desc">'+a.d+'</div></div><span class="agent-arrow">&rarr;</span><div class="agent-detail"><p>'+a.dd+'</p><span>Input: '+a.inp+'</span><span>Output: '+a.out+'</span></div>';
+  d.addEventListener('click',()=>{const dd=d.querySelector('.agent-detail');dd.style.display=dd.style.display==='none'?'block':'none'});
+  return d;
+}
+
+const reports=[
+{i:'馃搳',t:'Monthly Financial Review',tag:'CASE STUDY',d:'Full pipeline run on a freelancer 3-month data (432 txns, 9 accounts). Complete audit, analysis, tax, risk.',m:[{v:',320',c:'green',l:'Income'},{v:',250',c:'red',l:'Expenses'},{v:'35.3%',c:'green',l:'Savings'},{v:'82/100',c:'green',l:'Health'}],ag:'CFO + Auditor',pr:'Health: 82/100 vs Risk: Low\nIncome: ,320 (+12%)\nTop: Rent ,000, Dining ,240, SaaS ,890\n12 flagged txns >3sigma\nTax deductions maxed'},
+{i:'馃挕',t:'Investment Portfolio',tag:'DEMO',d:'Balanced profile 60/40 stock/bond. Real-time market data recommendations.',m:[{v:'60/40',c:'green',l:'Stock/Bond'},{v:'12-15%',c:'green',l:'Return'},{v:'8.2%',c:'green',l:'Drawdown'},{v:'USD,HKD',c:'gold',l:'Currency'}],ag:'Advisor + Risk',pr:'US: 35% | A-Share: 25% | Bonds: 20% | Cash: 12% | REITs: 8%\nVOO, 510300, BND, 511880\nVolatility: 11.2%\nStop-loss: -8%'},
+{i:'馃洝锔?,t:'Risk Audit Report',tag:'COMPLIANCE',d:'9-month business scan. Fraud detection, invoice audit, stress test.',m:[{v:'94%',c:'green',l:'Compliance'},{v:'3',c:'red',l:'Issues'},{v:'6.3mo',c:'green',l:'Runway'},{v:'B+',c:'gold',l:'Credit'}],ag:'Risk + Tax',pr:'Fraud: None confirmed\n3 suspicious: consulting fee, personal txn, sandbox\nInvoices: 342/356 pass (96%)\nStress: 6.3mo runway'},
+];
+
+const caps=[
+{t:'Auto-import & classify from any source (bank statements, CSV, pasted data)',c:'var(--green)'},
+{t:'Real-time market data integration (stock quotes, fund NAV, macro indicators)',c:'var(--accent)'},
+{t:'Professional-grade financial statements & ratios (P&L, Balance Sheet, Cash Flow)',c:'hsl(342,80%,70%)'},
+{t:'Tax calculation with all deductions and invoice compliance audit',c:'hsl(168,80%,50%)'},
+{t:'Fraud/AML detection, anti-money laundering pattern analysis, stress testing',c:'hsl(252,60%,70%)'},
+{t:'One-click Executive Summary with actionable insights',c:'var(--pink)'},
+];
+
+// Render agents
+const ag=document.getElementById('agentsGrid');
+agents.forEach((a,i)=>{ag.appendChild(renderAgent(a,i));setTimeout(()=>ag.lastChild.classList.add('visible'),100+i*120)});
+
+// Render reports
+const rg=document.getElementById('reportsGrid');
+reports.forEach((r,i)=>{
+  const d=document.createElement('div');
+  d.className='glass work-card reveal';
+  let ms='';r.m.forEach(m=>{ms+='<div class="metric"><div class="metric-value '+m.c+'">'+m.v+'</div><div class="metric-label">'+m.l+'</div></div>'});
+  d.innerHTML='<div class="work-header"><div class="work-icon">'+r.i+'</div><div class="work-title">'+r.t+'</div><span class="work-tag">'+r.tag+'</span></div><div class="work-desc">'+r.d+'</div><div class="work-metrics">'+ms+'</div><div class="work-actions"><button class="glass-btn work-btn" onclick="this.parentElement.nextElementSibling.style.display=this.parentElement.nextElementSibling.style.display==='none'?'block':'none'">馃搫 View Report</button><span class="work-input">Agents: <em>'+r.ag+'</em></span></div><div class="report-preview"><pre>'+r.pr+'</pre></div>';
+  rg.appendChild(d);setTimeout(()=>d.classList.add('visible'),300+i*150);
+});
+
+// Render capabilities
+const cg=document.getElementById('capsGrid');
+caps.forEach((c,i)=>{
+  const d=document.createElement('div');d.className='cap-item reveal';
+  d.innerHTML='<div class="cap-dot" style="background:'+c.c+'"></div><div class="cap-text">'+c.t+'</div>';
+  cg.appendChild(d);setTimeout(()=>d.classList.add('visible'),500+i*80);
+});
+</script>
+</body>
+</html>
+
++income.toLocaleString(), c:'green', l:'Monthly Income'},
+    {v:'
+// Starfield
+const c=document.getElementById('bg-canvas'),cx=c.getContext('2d');let st=[];
+function rs(){c.width=window.innerWidth;c.height=window.innerHeight}
+window.addEventListener('resize',rs);rs();
+const ct=Math.max(180,Math.floor((c.width*c.height)/8000));
+for(let i=0;i<ct;i++){st.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.2+0.3,a:Math.random()*0.6+0.2})}
+function dr(){cx.clearRect(0,0,c.width,c.height);
+for(const s of st){cx.beginPath();cx.arc(s.x,s.y,s.r,0,Math.PI*2);
+cx.fillStyle='rgba(255,255,255,'+s.a+')';cx.fill();
+s.a+=(Math.random()-0.48)*0.02;if(s.a<0.1)s.a=0.1;if(s.a>0.9)s.a=0.9}
+requestAnimationFrame(dr)}dr();
+
+// Nav scroll
+window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>60)});
+
+// Agents
+const agents=[
+{n:'AGENT 1',i:'馃搳',b:'rgba(0,184,148,0.12)',nm:'Finance Auditor',d:'Cleans & classifies your transaction data, flags anomalies',dd:'Imports raw data from any source, auto-detects categories, removes duplicates, flags micro-transactions, integer large transfers, after-hours activity, 3+sigma outliers.',inp:'Raw data',out:'Classified ledger'},
+{n:'AGENT 2',i:'馃搱',b:'rgba(255,130,180,0.12)',nm:'Financial Analyst',d:'Generates P&L, balance sheet, cash flow, key ratios',dd:'Transforms ledger to professional-grade P&L, Balance Sheet, Cash Flow, with liquidity/profitability/efficiency ratios.',inp:'Ledger',out:'Reports + ratios'},
+{n:'AGENT 3',i:'馃挕',b:'rgba(168,130,255,0.12)',nm:'Investment Advisor',d:'Real-time market research + personal portfolio',dd:'Uses neodata-financial-search for live stock quotes, fund NAVs. Recommends asset allocation with stop-loss levels.',inp:'Reports + risk profile',out:'Allocation + picks'},
+{n:'AGENT 4',i:'鈿栵笍',b:'rgba(130,200,255,0.12)',nm:'Tax Officer',d:'Tax calculation, invoice compliance, optimization',dd:'Calculates all taxes with deductions. Checks invoices for fraud patterns: round numbers, industry mismatch, sequential serials.',inp:'Ledger + info',out:'Tax report'},
+{n:'AGENT 5',i:'馃洝锔?,b:'rgba(255,200,80,0.12)',nm:'Risk Controller',d:'Fraud detection, compliance audit, stress test',dd:'Scans for fraud, audits compliance, checks vendor pricing, runs income interruption stress tests (3/6/12mo).',inp:'All pipeline data',out:'Risk score'},
+{n:'AGENT 6',i:'馃',b:'rgba(255,130,130,0.12)',nm:'CFO',d:'Synthesizes everything into executive summary + action plan',dd:'The commander. Executive Summary, Full Report, Action Items, 4-score Dashboard: Health/Compliance/Risk/Investment.',inp:'All agent outputs',out:'Final report + action plan'},
+];
+
+function renderAgent(a,i){
+  const d=document.createElement('div');
+  d.className='glass agent-card reveal';
+  d.innerHTML='<span class="agent-num">'+a.n+'</span><div class="agent-icon" style="background:'+a.b+'">'+a.i+'</div><div style="flex:1;min-width:0"><div class="agent-name">'+a.nm+'</div><div class="agent-desc">'+a.d+'</div></div><span class="agent-arrow">&rarr;</span><div class="agent-detail"><p>'+a.dd+'</p><span>Input: '+a.inp+'</span><span>Output: '+a.out+'</span></div>';
+  d.addEventListener('click',()=>{const dd=d.querySelector('.agent-detail');dd.style.display=dd.style.display==='none'?'block':'none'});
+  return d;
+}
+
+const reports=[
+{i:'馃搳',t:'Monthly Financial Review',tag:'CASE STUDY',d:'Full pipeline run on a freelancer 3-month data (432 txns, 9 accounts). Complete audit, analysis, tax, risk.',m:[{v:',320',c:'green',l:'Income'},{v:',250',c:'red',l:'Expenses'},{v:'35.3%',c:'green',l:'Savings'},{v:'82/100',c:'green',l:'Health'}],ag:'CFO + Auditor',pr:'Health: 82/100 vs Risk: Low\nIncome: ,320 (+12%)\nTop: Rent ,000, Dining ,240, SaaS ,890\n12 flagged txns >3sigma\nTax deductions maxed'},
+{i:'馃挕',t:'Investment Portfolio',tag:'DEMO',d:'Balanced profile 60/40 stock/bond. Real-time market data recommendations.',m:[{v:'60/40',c:'green',l:'Stock/Bond'},{v:'12-15%',c:'green',l:'Return'},{v:'8.2%',c:'green',l:'Drawdown'},{v:'USD,HKD',c:'gold',l:'Currency'}],ag:'Advisor + Risk',pr:'US: 35% | A-Share: 25% | Bonds: 20% | Cash: 12% | REITs: 8%\nVOO, 510300, BND, 511880\nVolatility: 11.2%\nStop-loss: -8%'},
+{i:'馃洝锔?,t:'Risk Audit Report',tag:'COMPLIANCE',d:'9-month business scan. Fraud detection, invoice audit, stress test.',m:[{v:'94%',c:'green',l:'Compliance'},{v:'3',c:'red',l:'Issues'},{v:'6.3mo',c:'green',l:'Runway'},{v:'B+',c:'gold',l:'Credit'}],ag:'Risk + Tax',pr:'Fraud: None confirmed\n3 suspicious: consulting fee, personal txn, sandbox\nInvoices: 342/356 pass (96%)\nStress: 6.3mo runway'},
+];
+
+const caps=[
+{t:'Auto-import & classify from any source (bank statements, CSV, pasted data)',c:'var(--green)'},
+{t:'Real-time market data integration (stock quotes, fund NAV, macro indicators)',c:'var(--accent)'},
+{t:'Professional-grade financial statements & ratios (P&L, Balance Sheet, Cash Flow)',c:'hsl(342,80%,70%)'},
+{t:'Tax calculation with all deductions and invoice compliance audit',c:'hsl(168,80%,50%)'},
+{t:'Fraud/AML detection, anti-money laundering pattern analysis, stress testing',c:'hsl(252,60%,70%)'},
+{t:'One-click Executive Summary with actionable insights',c:'var(--pink)'},
+];
+
+// Render agents
+const ag=document.getElementById('agentsGrid');
+agents.forEach((a,i)=>{ag.appendChild(renderAgent(a,i));setTimeout(()=>ag.lastChild.classList.add('visible'),100+i*120)});
+
+// Render reports
+const rg=document.getElementById('reportsGrid');
+reports.forEach((r,i)=>{
+  const d=document.createElement('div');
+  d.className='glass work-card reveal';
+  let ms='';r.m.forEach(m=>{ms+='<div class="metric"><div class="metric-value '+m.c+'">'+m.v+'</div><div class="metric-label">'+m.l+'</div></div>'});
+  d.innerHTML='<div class="work-header"><div class="work-icon">'+r.i+'</div><div class="work-title">'+r.t+'</div><span class="work-tag">'+r.tag+'</span></div><div class="work-desc">'+r.d+'</div><div class="work-metrics">'+ms+'</div><div class="work-actions"><button class="glass-btn work-btn" onclick="this.parentElement.nextElementSibling.style.display=this.parentElement.nextElementSibling.style.display==='none'?'block':'none'">馃搫 View Report</button><span class="work-input">Agents: <em>'+r.ag+'</em></span></div><div class="report-preview"><pre>'+r.pr+'</pre></div>';
+  rg.appendChild(d);setTimeout(()=>d.classList.add('visible'),300+i*150);
+});
+
+// Render capabilities
+const cg=document.getElementById('capsGrid');
+caps.forEach((c,i)=>{
+  const d=document.createElement('div');d.className='cap-item reveal';
+  d.innerHTML='<div class="cap-dot" style="background:'+c.c+'"></div><div class="cap-text">'+c.t+'</div>';
+  cg.appendChild(d);setTimeout(()=>d.classList.add('visible'),500+i*80);
+});
+</script>
+</body>
+</html>
+
++totalExpenses.toLocaleString(), c: totalExpenses>income ? 'red' : 'gold', l:'Total Expenses'},
+    {v:'
+// Starfield
+const c=document.getElementById('bg-canvas'),cx=c.getContext('2d');let st=[];
+function rs(){c.width=window.innerWidth;c.height=window.innerHeight}
+window.addEventListener('resize',rs);rs();
+const ct=Math.max(180,Math.floor((c.width*c.height)/8000));
+for(let i=0;i<ct;i++){st.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.2+0.3,a:Math.random()*0.6+0.2})}
+function dr(){cx.clearRect(0,0,c.width,c.height);
+for(const s of st){cx.beginPath();cx.arc(s.x,s.y,s.r,0,Math.PI*2);
+cx.fillStyle='rgba(255,255,255,'+s.a+')';cx.fill();
+s.a+=(Math.random()-0.48)*0.02;if(s.a<0.1)s.a=0.1;if(s.a>0.9)s.a=0.9}
+requestAnimationFrame(dr)}dr();
+
+// Nav scroll
+window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>60)});
+
+// Agents
+const agents=[
+{n:'AGENT 1',i:'馃搳',b:'rgba(0,184,148,0.12)',nm:'Finance Auditor',d:'Cleans & classifies your transaction data, flags anomalies',dd:'Imports raw data from any source, auto-detects categories, removes duplicates, flags micro-transactions, integer large transfers, after-hours activity, 3+sigma outliers.',inp:'Raw data',out:'Classified ledger'},
+{n:'AGENT 2',i:'馃搱',b:'rgba(255,130,180,0.12)',nm:'Financial Analyst',d:'Generates P&L, balance sheet, cash flow, key ratios',dd:'Transforms ledger to professional-grade P&L, Balance Sheet, Cash Flow, with liquidity/profitability/efficiency ratios.',inp:'Ledger',out:'Reports + ratios'},
+{n:'AGENT 3',i:'馃挕',b:'rgba(168,130,255,0.12)',nm:'Investment Advisor',d:'Real-time market research + personal portfolio',dd:'Uses neodata-financial-search for live stock quotes, fund NAVs. Recommends asset allocation with stop-loss levels.',inp:'Reports + risk profile',out:'Allocation + picks'},
+{n:'AGENT 4',i:'鈿栵笍',b:'rgba(130,200,255,0.12)',nm:'Tax Officer',d:'Tax calculation, invoice compliance, optimization',dd:'Calculates all taxes with deductions. Checks invoices for fraud patterns: round numbers, industry mismatch, sequential serials.',inp:'Ledger + info',out:'Tax report'},
+{n:'AGENT 5',i:'馃洝锔?,b:'rgba(255,200,80,0.12)',nm:'Risk Controller',d:'Fraud detection, compliance audit, stress test',dd:'Scans for fraud, audits compliance, checks vendor pricing, runs income interruption stress tests (3/6/12mo).',inp:'All pipeline data',out:'Risk score'},
+{n:'AGENT 6',i:'馃',b:'rgba(255,130,130,0.12)',nm:'CFO',d:'Synthesizes everything into executive summary + action plan',dd:'The commander. Executive Summary, Full Report, Action Items, 4-score Dashboard: Health/Compliance/Risk/Investment.',inp:'All agent outputs',out:'Final report + action plan'},
+];
+
+function renderAgent(a,i){
+  const d=document.createElement('div');
+  d.className='glass agent-card reveal';
+  d.innerHTML='<span class="agent-num">'+a.n+'</span><div class="agent-icon" style="background:'+a.b+'">'+a.i+'</div><div style="flex:1;min-width:0"><div class="agent-name">'+a.nm+'</div><div class="agent-desc">'+a.d+'</div></div><span class="agent-arrow">&rarr;</span><div class="agent-detail"><p>'+a.dd+'</p><span>Input: '+a.inp+'</span><span>Output: '+a.out+'</span></div>';
+  d.addEventListener('click',()=>{const dd=d.querySelector('.agent-detail');dd.style.display=dd.style.display==='none'?'block':'none'});
+  return d;
+}
+
+const reports=[
+{i:'馃搳',t:'Monthly Financial Review',tag:'CASE STUDY',d:'Full pipeline run on a freelancer 3-month data (432 txns, 9 accounts). Complete audit, analysis, tax, risk.',m:[{v:',320',c:'green',l:'Income'},{v:',250',c:'red',l:'Expenses'},{v:'35.3%',c:'green',l:'Savings'},{v:'82/100',c:'green',l:'Health'}],ag:'CFO + Auditor',pr:'Health: 82/100 vs Risk: Low\nIncome: ,320 (+12%)\nTop: Rent ,000, Dining ,240, SaaS ,890\n12 flagged txns >3sigma\nTax deductions maxed'},
+{i:'馃挕',t:'Investment Portfolio',tag:'DEMO',d:'Balanced profile 60/40 stock/bond. Real-time market data recommendations.',m:[{v:'60/40',c:'green',l:'Stock/Bond'},{v:'12-15%',c:'green',l:'Return'},{v:'8.2%',c:'green',l:'Drawdown'},{v:'USD,HKD',c:'gold',l:'Currency'}],ag:'Advisor + Risk',pr:'US: 35% | A-Share: 25% | Bonds: 20% | Cash: 12% | REITs: 8%\nVOO, 510300, BND, 511880\nVolatility: 11.2%\nStop-loss: -8%'},
+{i:'馃洝锔?,t:'Risk Audit Report',tag:'COMPLIANCE',d:'9-month business scan. Fraud detection, invoice audit, stress test.',m:[{v:'94%',c:'green',l:'Compliance'},{v:'3',c:'red',l:'Issues'},{v:'6.3mo',c:'green',l:'Runway'},{v:'B+',c:'gold',l:'Credit'}],ag:'Risk + Tax',pr:'Fraud: None confirmed\n3 suspicious: consulting fee, personal txn, sandbox\nInvoices: 342/356 pass (96%)\nStress: 6.3mo runway'},
+];
+
+const caps=[
+{t:'Auto-import & classify from any source (bank statements, CSV, pasted data)',c:'var(--green)'},
+{t:'Real-time market data integration (stock quotes, fund NAV, macro indicators)',c:'var(--accent)'},
+{t:'Professional-grade financial statements & ratios (P&L, Balance Sheet, Cash Flow)',c:'hsl(342,80%,70%)'},
+{t:'Tax calculation with all deductions and invoice compliance audit',c:'hsl(168,80%,50%)'},
+{t:'Fraud/AML detection, anti-money laundering pattern analysis, stress testing',c:'hsl(252,60%,70%)'},
+{t:'One-click Executive Summary with actionable insights',c:'var(--pink)'},
+];
+
+// Render agents
+const ag=document.getElementById('agentsGrid');
+agents.forEach((a,i)=>{ag.appendChild(renderAgent(a,i));setTimeout(()=>ag.lastChild.classList.add('visible'),100+i*120)});
+
+// Render reports
+const rg=document.getElementById('reportsGrid');
+reports.forEach((r,i)=>{
+  const d=document.createElement('div');
+  d.className='glass work-card reveal';
+  let ms='';r.m.forEach(m=>{ms+='<div class="metric"><div class="metric-value '+m.c+'">'+m.v+'</div><div class="metric-label">'+m.l+'</div></div>'});
+  d.innerHTML='<div class="work-header"><div class="work-icon">'+r.i+'</div><div class="work-title">'+r.t+'</div><span class="work-tag">'+r.tag+'</span></div><div class="work-desc">'+r.d+'</div><div class="work-metrics">'+ms+'</div><div class="work-actions"><button class="glass-btn work-btn" onclick="this.parentElement.nextElementSibling.style.display=this.parentElement.nextElementSibling.style.display==='none'?'block':'none'">馃搫 View Report</button><span class="work-input">Agents: <em>'+r.ag+'</em></span></div><div class="report-preview"><pre>'+r.pr+'</pre></div>';
+  rg.appendChild(d);setTimeout(()=>d.classList.add('visible'),300+i*150);
+});
+
+// Render capabilities
+const cg=document.getElementById('capsGrid');
+caps.forEach((c,i)=>{
+  const d=document.createElement('div');d.className='cap-item reveal';
+  d.innerHTML='<div class="cap-dot" style="background:'+c.c+'"></div><div class="cap-text">'+c.t+'</div>';
+  cg.appendChild(d);setTimeout(()=>d.classList.add('visible'),500+i*80);
+});
+</script>
+</body>
+</html>
+
++savings.toLocaleString(), c: savings>0 ? 'green' : 'red', l:'Net Savings'},
+    {v:savingsRate.toFixed(1)+'%', c: savingsRate>20 ? 'green' : 'gold', l:'Savings Rate'},
+    {v:healthScore+'/100', c: healthScore>70 ? 'green' : 'gold', l:'Health Score'},
+    {v:riskScore+'/100', c: riskScore<30 ? 'green' : 'red', l:'Risk Score'},
+  ];
+  for(var mi=0;mi<metrics.length;mi++) {
+    ms += '<div class="metric"><div class="metric-value '+metrics[mi].c+'">'+metrics[mi].v+'</div><div class="metric-label">'+metrics[mi].l+'</div></div>';
+  }
+  document.getElementById('fiMetrics').innerHTML = ms;
+  
+  categories.sort(function(a,b) { return b.v - a.v; });
+  var report = 'Financial Analysis Report\n';
+  report += 'Health: '+healthScore+'/100 | Risk: '+riskScore+'/100\n';
+  report += 'Income: 
+// Starfield
+const c=document.getElementById('bg-canvas'),cx=c.getContext('2d');let st=[];
+function rs(){c.width=window.innerWidth;c.height=window.innerHeight}
+window.addEventListener('resize',rs);rs();
+const ct=Math.max(180,Math.floor((c.width*c.height)/8000));
+for(let i=0;i<ct;i++){st.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.2+0.3,a:Math.random()*0.6+0.2})}
+function dr(){cx.clearRect(0,0,c.width,c.height);
+for(const s of st){cx.beginPath();cx.arc(s.x,s.y,s.r,0,Math.PI*2);
+cx.fillStyle='rgba(255,255,255,'+s.a+')';cx.fill();
+s.a+=(Math.random()-0.48)*0.02;if(s.a<0.1)s.a=0.1;if(s.a>0.9)s.a=0.9}
+requestAnimationFrame(dr)}dr();
+
+// Nav scroll
+window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>60)});
+
+// Agents
+const agents=[
+{n:'AGENT 1',i:'馃搳',b:'rgba(0,184,148,0.12)',nm:'Finance Auditor',d:'Cleans & classifies your transaction data, flags anomalies',dd:'Imports raw data from any source, auto-detects categories, removes duplicates, flags micro-transactions, integer large transfers, after-hours activity, 3+sigma outliers.',inp:'Raw data',out:'Classified ledger'},
+{n:'AGENT 2',i:'馃搱',b:'rgba(255,130,180,0.12)',nm:'Financial Analyst',d:'Generates P&L, balance sheet, cash flow, key ratios',dd:'Transforms ledger to professional-grade P&L, Balance Sheet, Cash Flow, with liquidity/profitability/efficiency ratios.',inp:'Ledger',out:'Reports + ratios'},
+{n:'AGENT 3',i:'馃挕',b:'rgba(168,130,255,0.12)',nm:'Investment Advisor',d:'Real-time market research + personal portfolio',dd:'Uses neodata-financial-search for live stock quotes, fund NAVs. Recommends asset allocation with stop-loss levels.',inp:'Reports + risk profile',out:'Allocation + picks'},
+{n:'AGENT 4',i:'鈿栵笍',b:'rgba(130,200,255,0.12)',nm:'Tax Officer',d:'Tax calculation, invoice compliance, optimization',dd:'Calculates all taxes with deductions. Checks invoices for fraud patterns: round numbers, industry mismatch, sequential serials.',inp:'Ledger + info',out:'Tax report'},
+{n:'AGENT 5',i:'馃洝锔?,b:'rgba(255,200,80,0.12)',nm:'Risk Controller',d:'Fraud detection, compliance audit, stress test',dd:'Scans for fraud, audits compliance, checks vendor pricing, runs income interruption stress tests (3/6/12mo).',inp:'All pipeline data',out:'Risk score'},
+{n:'AGENT 6',i:'馃',b:'rgba(255,130,130,0.12)',nm:'CFO',d:'Synthesizes everything into executive summary + action plan',dd:'The commander. Executive Summary, Full Report, Action Items, 4-score Dashboard: Health/Compliance/Risk/Investment.',inp:'All agent outputs',out:'Final report + action plan'},
+];
+
+function renderAgent(a,i){
+  const d=document.createElement('div');
+  d.className='glass agent-card reveal';
+  d.innerHTML='<span class="agent-num">'+a.n+'</span><div class="agent-icon" style="background:'+a.b+'">'+a.i+'</div><div style="flex:1;min-width:0"><div class="agent-name">'+a.nm+'</div><div class="agent-desc">'+a.d+'</div></div><span class="agent-arrow">&rarr;</span><div class="agent-detail"><p>'+a.dd+'</p><span>Input: '+a.inp+'</span><span>Output: '+a.out+'</span></div>';
+  d.addEventListener('click',()=>{const dd=d.querySelector('.agent-detail');dd.style.display=dd.style.display==='none'?'block':'none'});
+  return d;
+}
+
+const reports=[
+{i:'馃搳',t:'Monthly Financial Review',tag:'CASE STUDY',d:'Full pipeline run on a freelancer 3-month data (432 txns, 9 accounts). Complete audit, analysis, tax, risk.',m:[{v:',320',c:'green',l:'Income'},{v:',250',c:'red',l:'Expenses'},{v:'35.3%',c:'green',l:'Savings'},{v:'82/100',c:'green',l:'Health'}],ag:'CFO + Auditor',pr:'Health: 82/100 vs Risk: Low\nIncome: ,320 (+12%)\nTop: Rent ,000, Dining ,240, SaaS ,890\n12 flagged txns >3sigma\nTax deductions maxed'},
+{i:'馃挕',t:'Investment Portfolio',tag:'DEMO',d:'Balanced profile 60/40 stock/bond. Real-time market data recommendations.',m:[{v:'60/40',c:'green',l:'Stock/Bond'},{v:'12-15%',c:'green',l:'Return'},{v:'8.2%',c:'green',l:'Drawdown'},{v:'USD,HKD',c:'gold',l:'Currency'}],ag:'Advisor + Risk',pr:'US: 35% | A-Share: 25% | Bonds: 20% | Cash: 12% | REITs: 8%\nVOO, 510300, BND, 511880\nVolatility: 11.2%\nStop-loss: -8%'},
+{i:'馃洝锔?,t:'Risk Audit Report',tag:'COMPLIANCE',d:'9-month business scan. Fraud detection, invoice audit, stress test.',m:[{v:'94%',c:'green',l:'Compliance'},{v:'3',c:'red',l:'Issues'},{v:'6.3mo',c:'green',l:'Runway'},{v:'B+',c:'gold',l:'Credit'}],ag:'Risk + Tax',pr:'Fraud: None confirmed\n3 suspicious: consulting fee, personal txn, sandbox\nInvoices: 342/356 pass (96%)\nStress: 6.3mo runway'},
+];
+
+const caps=[
+{t:'Auto-import & classify from any source (bank statements, CSV, pasted data)',c:'var(--green)'},
+{t:'Real-time market data integration (stock quotes, fund NAV, macro indicators)',c:'var(--accent)'},
+{t:'Professional-grade financial statements & ratios (P&L, Balance Sheet, Cash Flow)',c:'hsl(342,80%,70%)'},
+{t:'Tax calculation with all deductions and invoice compliance audit',c:'hsl(168,80%,50%)'},
+{t:'Fraud/AML detection, anti-money laundering pattern analysis, stress testing',c:'hsl(252,60%,70%)'},
+{t:'One-click Executive Summary with actionable insights',c:'var(--pink)'},
+];
+
+// Render agents
+const ag=document.getElementById('agentsGrid');
+agents.forEach((a,i)=>{ag.appendChild(renderAgent(a,i));setTimeout(()=>ag.lastChild.classList.add('visible'),100+i*120)});
+
+// Render reports
+const rg=document.getElementById('reportsGrid');
+reports.forEach((r,i)=>{
+  const d=document.createElement('div');
+  d.className='glass work-card reveal';
+  let ms='';r.m.forEach(m=>{ms+='<div class="metric"><div class="metric-value '+m.c+'">'+m.v+'</div><div class="metric-label">'+m.l+'</div></div>'});
+  d.innerHTML='<div class="work-header"><div class="work-icon">'+r.i+'</div><div class="work-title">'+r.t+'</div><span class="work-tag">'+r.tag+'</span></div><div class="work-desc">'+r.d+'</div><div class="work-metrics">'+ms+'</div><div class="work-actions"><button class="glass-btn work-btn" onclick="this.parentElement.nextElementSibling.style.display=this.parentElement.nextElementSibling.style.display==='none'?'block':'none'">馃搫 View Report</button><span class="work-input">Agents: <em>'+r.ag+'</em></span></div><div class="report-preview"><pre>'+r.pr+'</pre></div>';
+  rg.appendChild(d);setTimeout(()=>d.classList.add('visible'),300+i*150);
+});
+
+// Render capabilities
+const cg=document.getElementById('capsGrid');
+caps.forEach((c,i)=>{
+  const d=document.createElement('div');d.className='cap-item reveal';
+  d.innerHTML='<div class="cap-dot" style="background:'+c.c+'"></div><div class="cap-text">'+c.t+'</div>';
+  cg.appendChild(d);setTimeout(()=>d.classList.add('visible'),500+i*80);
+});
+</script>
+</body>
+</html>
+
++income.toLocaleString()+' | Expenses: 
+// Starfield
+const c=document.getElementById('bg-canvas'),cx=c.getContext('2d');let st=[];
+function rs(){c.width=window.innerWidth;c.height=window.innerHeight}
+window.addEventListener('resize',rs);rs();
+const ct=Math.max(180,Math.floor((c.width*c.height)/8000));
+for(let i=0;i<ct;i++){st.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.2+0.3,a:Math.random()*0.6+0.2})}
+function dr(){cx.clearRect(0,0,c.width,c.height);
+for(const s of st){cx.beginPath();cx.arc(s.x,s.y,s.r,0,Math.PI*2);
+cx.fillStyle='rgba(255,255,255,'+s.a+')';cx.fill();
+s.a+=(Math.random()-0.48)*0.02;if(s.a<0.1)s.a=0.1;if(s.a>0.9)s.a=0.9}
+requestAnimationFrame(dr)}dr();
+
+// Nav scroll
+window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>60)});
+
+// Agents
+const agents=[
+{n:'AGENT 1',i:'馃搳',b:'rgba(0,184,148,0.12)',nm:'Finance Auditor',d:'Cleans & classifies your transaction data, flags anomalies',dd:'Imports raw data from any source, auto-detects categories, removes duplicates, flags micro-transactions, integer large transfers, after-hours activity, 3+sigma outliers.',inp:'Raw data',out:'Classified ledger'},
+{n:'AGENT 2',i:'馃搱',b:'rgba(255,130,180,0.12)',nm:'Financial Analyst',d:'Generates P&L, balance sheet, cash flow, key ratios',dd:'Transforms ledger to professional-grade P&L, Balance Sheet, Cash Flow, with liquidity/profitability/efficiency ratios.',inp:'Ledger',out:'Reports + ratios'},
+{n:'AGENT 3',i:'馃挕',b:'rgba(168,130,255,0.12)',nm:'Investment Advisor',d:'Real-time market research + personal portfolio',dd:'Uses neodata-financial-search for live stock quotes, fund NAVs. Recommends asset allocation with stop-loss levels.',inp:'Reports + risk profile',out:'Allocation + picks'},
+{n:'AGENT 4',i:'鈿栵笍',b:'rgba(130,200,255,0.12)',nm:'Tax Officer',d:'Tax calculation, invoice compliance, optimization',dd:'Calculates all taxes with deductions. Checks invoices for fraud patterns: round numbers, industry mismatch, sequential serials.',inp:'Ledger + info',out:'Tax report'},
+{n:'AGENT 5',i:'馃洝锔?,b:'rgba(255,200,80,0.12)',nm:'Risk Controller',d:'Fraud detection, compliance audit, stress test',dd:'Scans for fraud, audits compliance, checks vendor pricing, runs income interruption stress tests (3/6/12mo).',inp:'All pipeline data',out:'Risk score'},
+{n:'AGENT 6',i:'馃',b:'rgba(255,130,130,0.12)',nm:'CFO',d:'Synthesizes everything into executive summary + action plan',dd:'The commander. Executive Summary, Full Report, Action Items, 4-score Dashboard: Health/Compliance/Risk/Investment.',inp:'All agent outputs',out:'Final report + action plan'},
+];
+
+function renderAgent(a,i){
+  const d=document.createElement('div');
+  d.className='glass agent-card reveal';
+  d.innerHTML='<span class="agent-num">'+a.n+'</span><div class="agent-icon" style="background:'+a.b+'">'+a.i+'</div><div style="flex:1;min-width:0"><div class="agent-name">'+a.nm+'</div><div class="agent-desc">'+a.d+'</div></div><span class="agent-arrow">&rarr;</span><div class="agent-detail"><p>'+a.dd+'</p><span>Input: '+a.inp+'</span><span>Output: '+a.out+'</span></div>';
+  d.addEventListener('click',()=>{const dd=d.querySelector('.agent-detail');dd.style.display=dd.style.display==='none'?'block':'none'});
+  return d;
+}
+
+const reports=[
+{i:'馃搳',t:'Monthly Financial Review',tag:'CASE STUDY',d:'Full pipeline run on a freelancer 3-month data (432 txns, 9 accounts). Complete audit, analysis, tax, risk.',m:[{v:',320',c:'green',l:'Income'},{v:',250',c:'red',l:'Expenses'},{v:'35.3%',c:'green',l:'Savings'},{v:'82/100',c:'green',l:'Health'}],ag:'CFO + Auditor',pr:'Health: 82/100 vs Risk: Low\nIncome: ,320 (+12%)\nTop: Rent ,000, Dining ,240, SaaS ,890\n12 flagged txns >3sigma\nTax deductions maxed'},
+{i:'馃挕',t:'Investment Portfolio',tag:'DEMO',d:'Balanced profile 60/40 stock/bond. Real-time market data recommendations.',m:[{v:'60/40',c:'green',l:'Stock/Bond'},{v:'12-15%',c:'green',l:'Return'},{v:'8.2%',c:'green',l:'Drawdown'},{v:'USD,HKD',c:'gold',l:'Currency'}],ag:'Advisor + Risk',pr:'US: 35% | A-Share: 25% | Bonds: 20% | Cash: 12% | REITs: 8%\nVOO, 510300, BND, 511880\nVolatility: 11.2%\nStop-loss: -8%'},
+{i:'馃洝锔?,t:'Risk Audit Report',tag:'COMPLIANCE',d:'9-month business scan. Fraud detection, invoice audit, stress test.',m:[{v:'94%',c:'green',l:'Compliance'},{v:'3',c:'red',l:'Issues'},{v:'6.3mo',c:'green',l:'Runway'},{v:'B+',c:'gold',l:'Credit'}],ag:'Risk + Tax',pr:'Fraud: None confirmed\n3 suspicious: consulting fee, personal txn, sandbox\nInvoices: 342/356 pass (96%)\nStress: 6.3mo runway'},
+];
+
+const caps=[
+{t:'Auto-import & classify from any source (bank statements, CSV, pasted data)',c:'var(--green)'},
+{t:'Real-time market data integration (stock quotes, fund NAV, macro indicators)',c:'var(--accent)'},
+{t:'Professional-grade financial statements & ratios (P&L, Balance Sheet, Cash Flow)',c:'hsl(342,80%,70%)'},
+{t:'Tax calculation with all deductions and invoice compliance audit',c:'hsl(168,80%,50%)'},
+{t:'Fraud/AML detection, anti-money laundering pattern analysis, stress testing',c:'hsl(252,60%,70%)'},
+{t:'One-click Executive Summary with actionable insights',c:'var(--pink)'},
+];
+
+// Render agents
+const ag=document.getElementById('agentsGrid');
+agents.forEach((a,i)=>{ag.appendChild(renderAgent(a,i));setTimeout(()=>ag.lastChild.classList.add('visible'),100+i*120)});
+
+// Render reports
+const rg=document.getElementById('reportsGrid');
+reports.forEach((r,i)=>{
+  const d=document.createElement('div');
+  d.className='glass work-card reveal';
+  let ms='';r.m.forEach(m=>{ms+='<div class="metric"><div class="metric-value '+m.c+'">'+m.v+'</div><div class="metric-label">'+m.l+'</div></div>'});
+  d.innerHTML='<div class="work-header"><div class="work-icon">'+r.i+'</div><div class="work-title">'+r.t+'</div><span class="work-tag">'+r.tag+'</span></div><div class="work-desc">'+r.d+'</div><div class="work-metrics">'+ms+'</div><div class="work-actions"><button class="glass-btn work-btn" onclick="this.parentElement.nextElementSibling.style.display=this.parentElement.nextElementSibling.style.display==='none'?'block':'none'">馃搫 View Report</button><span class="work-input">Agents: <em>'+r.ag+'</em></span></div><div class="report-preview"><pre>'+r.pr+'</pre></div>';
+  rg.appendChild(d);setTimeout(()=>d.classList.add('visible'),300+i*150);
+});
+
+// Render capabilities
+const cg=document.getElementById('capsGrid');
+caps.forEach((c,i)=>{
+  const d=document.createElement('div');d.className='cap-item reveal';
+  d.innerHTML='<div class="cap-dot" style="background:'+c.c+'"></div><div class="cap-text">'+c.t+'</div>';
+  cg.appendChild(d);setTimeout(()=>d.classList.add('visible'),500+i*80);
+});
+</script>
+</body>
+</html>
+
++totalExpenses.toLocaleString()+' | Savings: 
+// Starfield
+const c=document.getElementById('bg-canvas'),cx=c.getContext('2d');let st=[];
+function rs(){c.width=window.innerWidth;c.height=window.innerHeight}
+window.addEventListener('resize',rs);rs();
+const ct=Math.max(180,Math.floor((c.width*c.height)/8000));
+for(let i=0;i<ct;i++){st.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.2+0.3,a:Math.random()*0.6+0.2})}
+function dr(){cx.clearRect(0,0,c.width,c.height);
+for(const s of st){cx.beginPath();cx.arc(s.x,s.y,s.r,0,Math.PI*2);
+cx.fillStyle='rgba(255,255,255,'+s.a+')';cx.fill();
+s.a+=(Math.random()-0.48)*0.02;if(s.a<0.1)s.a=0.1;if(s.a>0.9)s.a=0.9}
+requestAnimationFrame(dr)}dr();
+
+// Nav scroll
+window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>60)});
+
+// Agents
+const agents=[
+{n:'AGENT 1',i:'馃搳',b:'rgba(0,184,148,0.12)',nm:'Finance Auditor',d:'Cleans & classifies your transaction data, flags anomalies',dd:'Imports raw data from any source, auto-detects categories, removes duplicates, flags micro-transactions, integer large transfers, after-hours activity, 3+sigma outliers.',inp:'Raw data',out:'Classified ledger'},
+{n:'AGENT 2',i:'馃搱',b:'rgba(255,130,180,0.12)',nm:'Financial Analyst',d:'Generates P&L, balance sheet, cash flow, key ratios',dd:'Transforms ledger to professional-grade P&L, Balance Sheet, Cash Flow, with liquidity/profitability/efficiency ratios.',inp:'Ledger',out:'Reports + ratios'},
+{n:'AGENT 3',i:'馃挕',b:'rgba(168,130,255,0.12)',nm:'Investment Advisor',d:'Real-time market research + personal portfolio',dd:'Uses neodata-financial-search for live stock quotes, fund NAVs. Recommends asset allocation with stop-loss levels.',inp:'Reports + risk profile',out:'Allocation + picks'},
+{n:'AGENT 4',i:'鈿栵笍',b:'rgba(130,200,255,0.12)',nm:'Tax Officer',d:'Tax calculation, invoice compliance, optimization',dd:'Calculates all taxes with deductions. Checks invoices for fraud patterns: round numbers, industry mismatch, sequential serials.',inp:'Ledger + info',out:'Tax report'},
+{n:'AGENT 5',i:'馃洝锔?,b:'rgba(255,200,80,0.12)',nm:'Risk Controller',d:'Fraud detection, compliance audit, stress test',dd:'Scans for fraud, audits compliance, checks vendor pricing, runs income interruption stress tests (3/6/12mo).',inp:'All pipeline data',out:'Risk score'},
+{n:'AGENT 6',i:'馃',b:'rgba(255,130,130,0.12)',nm:'CFO',d:'Synthesizes everything into executive summary + action plan',dd:'The commander. Executive Summary, Full Report, Action Items, 4-score Dashboard: Health/Compliance/Risk/Investment.',inp:'All agent outputs',out:'Final report + action plan'},
+];
+
+function renderAgent(a,i){
+  const d=document.createElement('div');
+  d.className='glass agent-card reveal';
+  d.innerHTML='<span class="agent-num">'+a.n+'</span><div class="agent-icon" style="background:'+a.b+'">'+a.i+'</div><div style="flex:1;min-width:0"><div class="agent-name">'+a.nm+'</div><div class="agent-desc">'+a.d+'</div></div><span class="agent-arrow">&rarr;</span><div class="agent-detail"><p>'+a.dd+'</p><span>Input: '+a.inp+'</span><span>Output: '+a.out+'</span></div>';
+  d.addEventListener('click',()=>{const dd=d.querySelector('.agent-detail');dd.style.display=dd.style.display==='none'?'block':'none'});
+  return d;
+}
+
+const reports=[
+{i:'馃搳',t:'Monthly Financial Review',tag:'CASE STUDY',d:'Full pipeline run on a freelancer 3-month data (432 txns, 9 accounts). Complete audit, analysis, tax, risk.',m:[{v:',320',c:'green',l:'Income'},{v:',250',c:'red',l:'Expenses'},{v:'35.3%',c:'green',l:'Savings'},{v:'82/100',c:'green',l:'Health'}],ag:'CFO + Auditor',pr:'Health: 82/100 vs Risk: Low\nIncome: ,320 (+12%)\nTop: Rent ,000, Dining ,240, SaaS ,890\n12 flagged txns >3sigma\nTax deductions maxed'},
+{i:'馃挕',t:'Investment Portfolio',tag:'DEMO',d:'Balanced profile 60/40 stock/bond. Real-time market data recommendations.',m:[{v:'60/40',c:'green',l:'Stock/Bond'},{v:'12-15%',c:'green',l:'Return'},{v:'8.2%',c:'green',l:'Drawdown'},{v:'USD,HKD',c:'gold',l:'Currency'}],ag:'Advisor + Risk',pr:'US: 35% | A-Share: 25% | Bonds: 20% | Cash: 12% | REITs: 8%\nVOO, 510300, BND, 511880\nVolatility: 11.2%\nStop-loss: -8%'},
+{i:'馃洝锔?,t:'Risk Audit Report',tag:'COMPLIANCE',d:'9-month business scan. Fraud detection, invoice audit, stress test.',m:[{v:'94%',c:'green',l:'Compliance'},{v:'3',c:'red',l:'Issues'},{v:'6.3mo',c:'green',l:'Runway'},{v:'B+',c:'gold',l:'Credit'}],ag:'Risk + Tax',pr:'Fraud: None confirmed\n3 suspicious: consulting fee, personal txn, sandbox\nInvoices: 342/356 pass (96%)\nStress: 6.3mo runway'},
+];
+
+const caps=[
+{t:'Auto-import & classify from any source (bank statements, CSV, pasted data)',c:'var(--green)'},
+{t:'Real-time market data integration (stock quotes, fund NAV, macro indicators)',c:'var(--accent)'},
+{t:'Professional-grade financial statements & ratios (P&L, Balance Sheet, Cash Flow)',c:'hsl(342,80%,70%)'},
+{t:'Tax calculation with all deductions and invoice compliance audit',c:'hsl(168,80%,50%)'},
+{t:'Fraud/AML detection, anti-money laundering pattern analysis, stress testing',c:'hsl(252,60%,70%)'},
+{t:'One-click Executive Summary with actionable insights',c:'var(--pink)'},
+];
+
+// Render agents
+const ag=document.getElementById('agentsGrid');
+agents.forEach((a,i)=>{ag.appendChild(renderAgent(a,i));setTimeout(()=>ag.lastChild.classList.add('visible'),100+i*120)});
+
+// Render reports
+const rg=document.getElementById('reportsGrid');
+reports.forEach((r,i)=>{
+  const d=document.createElement('div');
+  d.className='glass work-card reveal';
+  let ms='';r.m.forEach(m=>{ms+='<div class="metric"><div class="metric-value '+m.c+'">'+m.v+'</div><div class="metric-label">'+m.l+'</div></div>'});
+  d.innerHTML='<div class="work-header"><div class="work-icon">'+r.i+'</div><div class="work-title">'+r.t+'</div><span class="work-tag">'+r.tag+'</span></div><div class="work-desc">'+r.d+'</div><div class="work-metrics">'+ms+'</div><div class="work-actions"><button class="glass-btn work-btn" onclick="this.parentElement.nextElementSibling.style.display=this.parentElement.nextElementSibling.style.display==='none'?'block':'none'">馃搫 View Report</button><span class="work-input">Agents: <em>'+r.ag+'</em></span></div><div class="report-preview"><pre>'+r.pr+'</pre></div>';
+  rg.appendChild(d);setTimeout(()=>d.classList.add('visible'),300+i*150);
+});
+
+// Render capabilities
+const cg=document.getElementById('capsGrid');
+caps.forEach((c,i)=>{
+  const d=document.createElement('div');d.className='cap-item reveal';
+  d.innerHTML='<div class="cap-dot" style="background:'+c.c+'"></div><div class="cap-text">'+c.t+'</div>';
+  cg.appendChild(d);setTimeout(()=>d.classList.add('visible'),500+i*80);
+});
+</script>
+</body>
+</html>
+
++savings.toLocaleString()+' ('+savingsRate.toFixed(1)+'%)\n\n';
+  report += 'Category Breakdown:\n';
+  for(var ci=0;ci<categories.length;ci++) {
+    report += '  '+categories[ci].n+': 
+// Starfield
+const c=document.getElementById('bg-canvas'),cx=c.getContext('2d');let st=[];
+function rs(){c.width=window.innerWidth;c.height=window.innerHeight}
+window.addEventListener('resize',rs);rs();
+const ct=Math.max(180,Math.floor((c.width*c.height)/8000));
+for(let i=0;i<ct;i++){st.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.2+0.3,a:Math.random()*0.6+0.2})}
+function dr(){cx.clearRect(0,0,c.width,c.height);
+for(const s of st){cx.beginPath();cx.arc(s.x,s.y,s.r,0,Math.PI*2);
+cx.fillStyle='rgba(255,255,255,'+s.a+')';cx.fill();
+s.a+=(Math.random()-0.48)*0.02;if(s.a<0.1)s.a=0.1;if(s.a>0.9)s.a=0.9}
+requestAnimationFrame(dr)}dr();
+
+// Nav scroll
+window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>60)});
+
+// Agents
+const agents=[
+{n:'AGENT 1',i:'馃搳',b:'rgba(0,184,148,0.12)',nm:'Finance Auditor',d:'Cleans & classifies your transaction data, flags anomalies',dd:'Imports raw data from any source, auto-detects categories, removes duplicates, flags micro-transactions, integer large transfers, after-hours activity, 3+sigma outliers.',inp:'Raw data',out:'Classified ledger'},
+{n:'AGENT 2',i:'馃搱',b:'rgba(255,130,180,0.12)',nm:'Financial Analyst',d:'Generates P&L, balance sheet, cash flow, key ratios',dd:'Transforms ledger to professional-grade P&L, Balance Sheet, Cash Flow, with liquidity/profitability/efficiency ratios.',inp:'Ledger',out:'Reports + ratios'},
+{n:'AGENT 3',i:'馃挕',b:'rgba(168,130,255,0.12)',nm:'Investment Advisor',d:'Real-time market research + personal portfolio',dd:'Uses neodata-financial-search for live stock quotes, fund NAVs. Recommends asset allocation with stop-loss levels.',inp:'Reports + risk profile',out:'Allocation + picks'},
+{n:'AGENT 4',i:'鈿栵笍',b:'rgba(130,200,255,0.12)',nm:'Tax Officer',d:'Tax calculation, invoice compliance, optimization',dd:'Calculates all taxes with deductions. Checks invoices for fraud patterns: round numbers, industry mismatch, sequential serials.',inp:'Ledger + info',out:'Tax report'},
+{n:'AGENT 5',i:'馃洝锔?,b:'rgba(255,200,80,0.12)',nm:'Risk Controller',d:'Fraud detection, compliance audit, stress test',dd:'Scans for fraud, audits compliance, checks vendor pricing, runs income interruption stress tests (3/6/12mo).',inp:'All pipeline data',out:'Risk score'},
+{n:'AGENT 6',i:'馃',b:'rgba(255,130,130,0.12)',nm:'CFO',d:'Synthesizes everything into executive summary + action plan',dd:'The commander. Executive Summary, Full Report, Action Items, 4-score Dashboard: Health/Compliance/Risk/Investment.',inp:'All agent outputs',out:'Final report + action plan'},
+];
+
+function renderAgent(a,i){
+  const d=document.createElement('div');
+  d.className='glass agent-card reveal';
+  d.innerHTML='<span class="agent-num">'+a.n+'</span><div class="agent-icon" style="background:'+a.b+'">'+a.i+'</div><div style="flex:1;min-width:0"><div class="agent-name">'+a.nm+'</div><div class="agent-desc">'+a.d+'</div></div><span class="agent-arrow">&rarr;</span><div class="agent-detail"><p>'+a.dd+'</p><span>Input: '+a.inp+'</span><span>Output: '+a.out+'</span></div>';
+  d.addEventListener('click',()=>{const dd=d.querySelector('.agent-detail');dd.style.display=dd.style.display==='none'?'block':'none'});
+  return d;
+}
+
+const reports=[
+{i:'馃搳',t:'Monthly Financial Review',tag:'CASE STUDY',d:'Full pipeline run on a freelancer 3-month data (432 txns, 9 accounts). Complete audit, analysis, tax, risk.',m:[{v:',320',c:'green',l:'Income'},{v:',250',c:'red',l:'Expenses'},{v:'35.3%',c:'green',l:'Savings'},{v:'82/100',c:'green',l:'Health'}],ag:'CFO + Auditor',pr:'Health: 82/100 vs Risk: Low\nIncome: ,320 (+12%)\nTop: Rent ,000, Dining ,240, SaaS ,890\n12 flagged txns >3sigma\nTax deductions maxed'},
+{i:'馃挕',t:'Investment Portfolio',tag:'DEMO',d:'Balanced profile 60/40 stock/bond. Real-time market data recommendations.',m:[{v:'60/40',c:'green',l:'Stock/Bond'},{v:'12-15%',c:'green',l:'Return'},{v:'8.2%',c:'green',l:'Drawdown'},{v:'USD,HKD',c:'gold',l:'Currency'}],ag:'Advisor + Risk',pr:'US: 35% | A-Share: 25% | Bonds: 20% | Cash: 12% | REITs: 8%\nVOO, 510300, BND, 511880\nVolatility: 11.2%\nStop-loss: -8%'},
+{i:'馃洝锔?,t:'Risk Audit Report',tag:'COMPLIANCE',d:'9-month business scan. Fraud detection, invoice audit, stress test.',m:[{v:'94%',c:'green',l:'Compliance'},{v:'3',c:'red',l:'Issues'},{v:'6.3mo',c:'green',l:'Runway'},{v:'B+',c:'gold',l:'Credit'}],ag:'Risk + Tax',pr:'Fraud: None confirmed\n3 suspicious: consulting fee, personal txn, sandbox\nInvoices: 342/356 pass (96%)\nStress: 6.3mo runway'},
+];
+
+const caps=[
+{t:'Auto-import & classify from any source (bank statements, CSV, pasted data)',c:'var(--green)'},
+{t:'Real-time market data integration (stock quotes, fund NAV, macro indicators)',c:'var(--accent)'},
+{t:'Professional-grade financial statements & ratios (P&L, Balance Sheet, Cash Flow)',c:'hsl(342,80%,70%)'},
+{t:'Tax calculation with all deductions and invoice compliance audit',c:'hsl(168,80%,50%)'},
+{t:'Fraud/AML detection, anti-money laundering pattern analysis, stress testing',c:'hsl(252,60%,70%)'},
+{t:'One-click Executive Summary with actionable insights',c:'var(--pink)'},
+];
+
+// Render agents
+const ag=document.getElementById('agentsGrid');
+agents.forEach((a,i)=>{ag.appendChild(renderAgent(a,i));setTimeout(()=>ag.lastChild.classList.add('visible'),100+i*120)});
+
+// Render reports
+const rg=document.getElementById('reportsGrid');
+reports.forEach((r,i)=>{
+  const d=document.createElement('div');
+  d.className='glass work-card reveal';
+  let ms='';r.m.forEach(m=>{ms+='<div class="metric"><div class="metric-value '+m.c+'">'+m.v+'</div><div class="metric-label">'+m.l+'</div></div>'});
+  d.innerHTML='<div class="work-header"><div class="work-icon">'+r.i+'</div><div class="work-title">'+r.t+'</div><span class="work-tag">'+r.tag+'</span></div><div class="work-desc">'+r.d+'</div><div class="work-metrics">'+ms+'</div><div class="work-actions"><button class="glass-btn work-btn" onclick="this.parentElement.nextElementSibling.style.display=this.parentElement.nextElementSibling.style.display==='none'?'block':'none'">馃搫 View Report</button><span class="work-input">Agents: <em>'+r.ag+'</em></span></div><div class="report-preview"><pre>'+r.pr+'</pre></div>';
+  rg.appendChild(d);setTimeout(()=>d.classList.add('visible'),300+i*150);
+});
+
+// Render capabilities
+const cg=document.getElementById('capsGrid');
+caps.forEach((c,i)=>{
+  const d=document.createElement('div');d.className='cap-item reveal';
+  d.innerHTML='<div class="cap-dot" style="background:'+c.c+'"></div><div class="cap-text">'+c.t+'</div>';
+  cg.appendChild(d);setTimeout(()=>d.classList.add('visible'),500+i*80);
+});
+</script>
+</body>
+</html>
+
++categories[ci].v.toLocaleString()+' ('+categories[ci].p+'%)\n';
+  }
+  report += '\n';
+  if(savingsRate>20) {
+    report += 'Recommendation: Healthy savings rate. Consider investing surplus in diversified index funds (VOO, BND).\n';
+  } else if(savingsRate>10) {
+    report += 'Recommendation: Moderate savings. Consider reducing non-essential expenses to target 20%+.\n';
+  } else if(savingsRate>0) {
+    report += 'Recommendation: Low savings rate. Review discretionary spending.\n';
+  } else {
+    report += 'Warning: Negative cash flow. Reduce expenses or increase income.\n';
+  }
+  report += '\nAgent Scorecard:\n';
+  report += '  Auditor: '+totalExpenses+' total expenses across '+categories.length+' categories\n';
+  report += '  Analyst: Savings rate '+savingsRate.toFixed(1)+'% | Health '+healthScore+'/100\n';
+  report += '  Advisor: Target allocation 60/30/10 stocks/bonds/cash\n';
+  report += '  Tax Officer: Standard deduction applied | Compliance '+complianceScore+'%\n';
+  report += '  Risk Controller: Risk score '+riskScore+'/100 | '+(riskScore<30?'Low risk':'Medium risk')+'\n';
+  report += '  CFO: '+(healthScore>70?'Solid financial position. Maintain current trajectory.':'Room for improvement. Focus on expense optimization.')+'\n';
+  
+  document.getElementById('fiReportText').textContent = report;
+  document.getElementById('fiResults').style.display = 'block';
+  document.getElementById('fiResults').scrollIntoView({behavior:'smooth'});
+}
+
 // Starfield
 const c=document.getElementById('bg-canvas'),cx=c.getContext('2d');let st=[];
 function rs(){c.width=window.innerWidth;c.height=window.innerHeight}
